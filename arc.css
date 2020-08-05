@@ -450,6 +450,17 @@ input.url.vivaldi-addressfield {
 	background-color: var(--colorArcSidebar);
 }
 
+/* Panel sizing */
+#switch {
+	flex: 0 0 38px;
+}
+
+#switch .addwebpanel-wrapper > button,
+#switch > button {
+	width: 38px;
+  height: 38px;
+}
+
 /* Panel buttons */
 #switch > button,
 #switch .addwebpanel-wrapper > button {
