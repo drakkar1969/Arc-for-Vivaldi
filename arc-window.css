@@ -15,7 +15,7 @@
 	width: 16px;
 	height: 16px;
 	background-color: transparent !important;
-	zoom: 0.8;
+	zoom: 0.9;
 }
 
 /* Hide default svg images on buttons */
@@ -84,11 +84,11 @@
 /* Horizontal position */
 .linux .window-close {
 	margin-left: 13px !important;
-	margin-right: 5px !important;
+	margin-right: 6px !important;
 }
 
 .linux.alt .window-close {
-	margin-left: 4px !important;
+	margin-left: 6px !important;
 	margin-right: 40px !important;
 }
 
