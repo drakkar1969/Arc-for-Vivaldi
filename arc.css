@@ -586,7 +586,7 @@ input.url.vivaldi-addressfield {
 
 /* Fix icon/text alignment on bookmark toolbar buttons */
 .bookmark-bar button img, .bookmark-bar button svg {
-	margin: 4px 0 7px;
+	margin: 5px 0 6px;
 }
 
 .bookmark-bar button img + span, .bookmark-bar button svg + span {
