@@ -427,10 +427,16 @@ input.url.vivaldi-addressfield {
 	background: var(--colorAccentBg) !important;
 }
 
-/* Light text and button color (Darker theme) */
+/* Text color */
+#browser.theme-light #header {
+	color: rgba(82, 93, 118, 0.8) !important;
+	fill: rgba(82, 93, 118, 0.8);
+}
+
+#browser.theme-dark #header,
 #browser.theme-light.acc-dark #header {
-	color: #d3dae3 !important;
-	fill: #d3dae3;
+	color: rgba(207, 218, 231, 0.8) !important;
+	fill: rgba(207, 218, 231, 0.8);
 }
 
 /* Header bottom border */
