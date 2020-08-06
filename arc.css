@@ -75,6 +75,11 @@ body {
 	border: 1px solid var(--colorArcBorderDark);
 }
 
+/* Fix active tab close button glyph color (Darker theme only) */
+.theme-light.acc-dark #tabs-container.top .tab-position .tab.active .close svg {
+	fill: #343e45;
+}
+
 /* Ensure active tab is on top of tab strip border */
 #tabs-container.top .tab-position .tab.active {
 	margin-bottom: -1px;
