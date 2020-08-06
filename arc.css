@@ -431,13 +431,13 @@ input.url.vivaldi-addressfield {
 /* Text color */
 #browser.theme-light #header {
 	color: rgba(82, 93, 118, 0.8) !important;
-	fill: rgba(82, 93, 118, 0.8);
+	fill: #5C616C;
 }
 
 #browser.theme-dark #header,
 #browser.theme-light.acc-dark #header {
 	color: rgba(207, 218, 231, 0.8) !important;
-	fill: rgba(207, 218, 231, 0.8);
+	fill: #D3DAE3;
 }
 
 /* Header bottom border */
