@@ -424,7 +424,7 @@ input.url.vivaldi-addressfield {
 	HEADER
 ***********************************************************************/
 #browser:not(.tabs-top) #header {
-	background: var(--colorAccentBg);
+	background: var(--colorAccentBg) !important;
 }
 
 /* Light text and button color (Darker theme) */
