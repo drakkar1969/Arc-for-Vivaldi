@@ -1,6 +1,6 @@
 # Vivaldi Arc Theme
 
-Arc for Vivaldi is a set of custom CSS files that integrate Vivaldi's UI with [Arc](https://github.com/NicoHood/arc-theme), a popular GTK theme. Rework of **Tiamarth's** [original theme](https://github.com/Tiamarth/Arc-for-Vivaldi) for Vivaldi.
+Arc for Vivaldi is a set of custom CSS files that integrate Vivaldi's UI with [Arc](https://github.com/jnsh/arc-theme), a popular GTK theme. Rework of **Tiamarth's** [original theme](https://github.com/Tiamarth/Arc-for-Vivaldi) for Vivaldi.
 
 ## Screenshots
 
