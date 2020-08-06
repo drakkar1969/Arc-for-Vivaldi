@@ -221,6 +221,10 @@ body {
 	background: var(--colorAccentBg);
 }
 
+#browser.address-top:not(.tabs-top) .toolbar-addressbar.toolbar .toolbar-mainbar {
+	background: var(--colorAccentBg);
+}
+
 /* Addressfield colors when tabs are not on top (Darker theme) */
 #browser.theme-light.acc-dark.address-top:not(.tabs-top) .addressfield {
 	background-color: #242836;
@@ -338,7 +342,15 @@ body {
 	background: var(--colorAccentBg);
 }
 
+#browser.address-bottom:not(.tabs-bottom) .toolbar-addressbar.toolbar .toolbar-mainbar {
+	background: var(--colorAccentBg);
+}
+
 #browser.theme-light.acc-dark.address-bottom:not(.tabs-bottom) .toolbar-addressbar.toolbar {
+	background: #e7e8eb;
+}
+
+#browser.theme-light.acc-dark.address-bottom:not(.tabs-bottom) .toolbar-addressbar.toolbar .toolbar-mainbar {
 	background: #e7e8eb;
 }
 
