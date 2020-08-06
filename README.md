@@ -2,15 +2,20 @@
 
 Arc for Vivaldi is a set of custom CSS files that integrate Vivaldi's UI with [Arc](https://github.com/NicoHood/arc-theme), a popular GTK theme. Rework of **Tiamarth's** [original theme](https://github.com/Tiamarth/Arc-for-Vivaldi) for Vivaldi.
 
-## Screenshots:
+## Screenshots
 
+#### Arc
 <div align="left"><img src="screenshots/light.png" alt="Preview" /></div>
-<br>
-<div align="left"><img src="screenshots/dark.png" alt="Preview" /></div>
-<br>
-<div align="left"><img src="screenshots/darker.png" alt="Preview" /></div>
 
-## Features:
+#### Arc-Dark
+<div align="left"><img src="screenshots/dark.png" alt="Preview" /></div>
+
+#### Arc-Darker
+<div align="left"><img src="screenshots/darker.png" alt="Preview" /></div>
+<br>
+<div align="left"><img src="screenshots/darker2.png" alt="Preview" /></div>
+
+## Features
 
 - Remove Vivaldi's header gradient
 - When tabs are not at the top of the window, merge address bar with header
