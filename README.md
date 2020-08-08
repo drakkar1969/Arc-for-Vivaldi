@@ -70,7 +70,10 @@ Then open `browser.html` again and add the following under the code from the fir
 ### Custom Arc Color
 
 If you are using a custom version of the Arc theme(s) that uses a color that is different from the standard Arc blue, just change the `Highlight` color in the table above from `#5294e2` to your preferred color.  
-For example, to use [Manjaro](https://manjaro.org/) green, change the `Highlight` color to `#34be5b`.
+For example:
+
+- Manjaro green: `#34be5b`
+- Ubuntu orange: `#dd4814`
 
 ## Todo
 
