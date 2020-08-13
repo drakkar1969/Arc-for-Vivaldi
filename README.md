@@ -26,13 +26,10 @@ Arc for Vivaldi is a set of custom CSS files that integrate Vivaldi's UI with [A
 
 #### 1. Install custom CSS files
 
-Find the `style` folder in your Vivaldi install directory, which should be in the following location: `/opt/vivaldi/resources/vivaldi/style`.
-
-To **integrate with Arc,** save `arc.css` in the `style` folder, i.e. to `/opt/vivaldi/resources/vivaldi/style/arc.css`.
-
-Then open `/opt/vivaldi/resources/vivaldi/browser.html` in a text editor and add the following to the `<head>` section, just below the line `<link rel="stylesheet" href="style/common.css" />`:
-
-	<link rel="stylesheet" href="style/arc.css" />
+- In Vivaldi, open `vivaldi://experiments`
+- Select the `Allow for using CSS modifications` checkbox
+- Open the `Appearance` page in Vivaldi settings
+- In the `CUSTOM UI MODIFICATIONS` section, select the folder where you have saved the Vivaldi Arc theme files (`arc.css`, `arc-window.css` and `arc` folder)
 
 #### 2. Configure Vivaldi theme settings
 
@@ -61,11 +58,7 @@ Configure the start page background color (`Settings -> Start Page`) as follows:
 
 ### Arc Window Buttons
 
-If you want to **use the Arc window buttons** instead of Vivaldi's default window buttons, save `arc-window.css` and the `arc` folder in `style` as well (i.e. `/opt/vivaldi/resources/vivaldi/style/arc-window.css` and `/opt/vivaldi/resources/vivaldi/style/arc/`).
-
-Then open `browser.html` again and add the following under the code from the first step:
-
-	<link rel="stylesheet" href="style/arc-window.css" />
+If you do not want to **use the Arc window buttons**, delete the `arc-window.css` file and the `arc` sub-folder from the folder where you have saved the Vivaldi Arc theme files.
 
 ### Custom Arc Color
 
