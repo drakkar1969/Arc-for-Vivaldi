@@ -91,3 +91,28 @@ body {
 #tabs-container.top .tab-position .tab.active {
 	margin-bottom: -1px;
 }
+
+/***********************************************************************
+	TABS BOTTOM
+***********************************************************************/
+/* Border around hover/active tab */
+#tabs-container.bottom .tab-position .tab {
+	border: 1px solid transparent;
+	border-top-width: 0 !important;
+}
+
+#tabs-container.bottom .tab-position .tab:hover,
+#tabs-container.bottom .tab-position .tab.active {
+	border: 1px solid var(--clrArcBorderLight);
+}
+
+/* Dark border for Dark theme */
+.theme-dark #tabs-container.bottom .tab-position .tab:hover,
+.theme-dark #tabs-container.bottom .tab-position .tab.active {
+	border: 1px solid var(--clrArcBorderDark);
+}
+
+/* Ensure active tab is on top of tab strip border */
+#tabs-container.bottom .tab-position .tab.active {
+	margin-top: -1px;
+}
