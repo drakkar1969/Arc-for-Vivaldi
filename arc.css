@@ -32,3 +32,26 @@ body {
 .theme-light.acc-dark #tabs-tabbar-container.top {
 	border-bottom: 1px solid var(--clrArcBorderDark) !important;
 }
+
+/***********************************************************************
+	TAB CONTAINER BOTTOM
+***********************************************************************/
+/* Background */
+#tabs-tabbar-container.bottom, #tabs-container.bottom {
+	background-color: var(--clrArcWindowLight);
+}
+
+/* Dark background for Dark theme */
+.theme-dark #tabs-tabbar-container.bottom, .theme-dark #tabs-container.bottom {
+	background-color: var(--clrArcWindowDark);
+}
+
+/* Border */
+#tabs-tabbar-container.bottom {
+	border-top: 1px solid var(--clrArcBorderLight) !important;
+}
+
+/* Dark border for Dark theme */
+.theme-dark #tabs-tabbar-container.bottom {
+	border-top: 1px solid var(--clrArcBorderDark) !important;
+}
