@@ -1,0 +1,34 @@
+/***********************************************************************
+	COLOR VARIABLES
+***********************************************************************/
+body {
+	--clrArcWindowLight: #e7e8eb;
+	--clrArcWindowDark: #2f343f;
+	--clrArcBorderLight: #d4d5db;
+	--clrArcBorderDark: #262a33;
+}
+
+/***********************************************************************
+	TAB CONTAINER TOP
+***********************************************************************/
+/* Background */
+#tabs-tabbar-container.top, #tabs-container.top {
+	background-color: var(--clrArcWindowLight);
+}
+
+/* Dark background for Dark/Darker themes */
+.theme-dark #tabs-tabbar-container.top, .theme-dark #tabs-container.top,
+.theme-light.acc-dark #tabs-tabbar-container.top, .theme-light.acc-dark #tabs-container.top {
+	background-color: var(--clrArcWindowDark);
+}
+
+/* Border */
+#tabs-tabbar-container.top {
+	border-bottom: 1px solid var(--clrArcBorderLight) !important;
+}
+
+/* Dark border for Dark/Darker themes */
+.theme-dark #tabs-tabbar-container.top,
+.theme-light.acc-dark #tabs-tabbar-container.top {
+	border-bottom: 1px solid var(--clrArcBorderDark) !important;
+}
