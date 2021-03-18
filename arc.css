@@ -64,3 +64,30 @@ body {
 	font-size: 13px;
 	-webkit-mask-image: -webkit-linear-gradient(180deg, transparent 0px, transparent 6px, #fff 14px);
 }
+
+/***********************************************************************
+	TABS TOP
+***********************************************************************/
+/* Border around hover/active tab */
+#tabs-container.top .tab-position .tab {
+	border: 1px solid transparent;
+	border-bottom-width: 0 !important;
+}
+
+#tabs-container.top .tab-position .tab:hover,
+#tabs-container.top .tab-position .tab.active {
+	border: 1px solid var(--clrArcBorderLight);
+}
+
+/* Dark border for Dark/Darker themes */
+.theme-dark #tabs-container.top .tab-position .tab:hover,
+.theme-dark #tabs-container.top .tab-position .tab.active,
+.theme-light.acc-dark #tabs-container.top .tab-position .tab:hover,
+.theme-light.acc-dark #tabs-container.top .tab-position .tab.active {
+	border: 1px solid var(--clrArcBorderDark);
+}
+
+/* Ensure active tab is on top of tab strip border */
+#tabs-container.top .tab-position .tab.active {
+	margin-bottom: -1px;
+}
