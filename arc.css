@@ -178,3 +178,19 @@ body {
 	color: var(--clrArcTextDark);
 	fill: var(--clrArcTextDark);
 }
+
+/***********************************************************************
+	HEADER
+***********************************************************************/
+/* Background/bottom border */
+#browser:not(.tabs-top) #header {
+	background-color: var(--clrArcWindowLight) !important;
+	border-bottom: 1px solid var(--clrArcBorderLight) !important;
+	box-shadow: none !important;
+}
+
+#browser.theme-dark:not(.tabs-top) #header,
+#browser.theme-light.acc-dark:not(.tabs-top) #header {
+	background-color: var(--clrArcWindowDark) !important;
+	border-bottom: 1px solid var(--clrArcBorderDark) !important;
+}
