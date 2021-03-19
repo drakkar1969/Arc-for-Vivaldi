@@ -129,6 +129,11 @@ body {
 	margin-top: -1px;
 }
 
+/* Tab hover text color for Darker theme */
+.theme-light.acc-dark #tabs-container.bottom .tab-position .tab:hover:not(.active) {
+	color: var(--clrArcEmphasisTextLight);
+}
+
 /***********************************************************************
 	TABS TOP/BOTTOM
 ***********************************************************************/
