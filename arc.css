@@ -175,6 +175,19 @@ body {
 	background: var(--clrArcWindowDark);
 }
 
+/* Bottom border color */
+#browser.address-top .toolbar-mainbar:after {
+	background-color: var(--clrArcBorderLight);
+}
+
+#browser.theme-dark.address-top .toolbar-mainbar:after {
+	background-color: var(--clrArcBorderDark);
+}
+
+#browser.theme-light.acc-dark.address-top:not(.tabs-top) .toolbar-mainbar:after {
+	background-color: var(--clrArcBorderDark);
+}
+
 /* Light text/icons when addressbar is merged with header for Darker theme */
 #browser.theme-light.acc-dark.address-top:not(.tabs-top) .toolbar-mainbar {
 	color: var(--clrArcTextDark);
