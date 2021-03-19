@@ -250,6 +250,7 @@ body {
 #browser.theme-light.acc-dark.address-top:not(.tabs-top) .UrlBar-SearchField {
 	background-color: var(--clrArcInputBorder);
 	border-color: var(--clrArcInputBorder);
+	color: var(--clrArcTextDark);
 }
 
 #browser.theme-light.acc-dark.address-top:not(.tabs-top) .UrlBar-SearchField:focus-within {
