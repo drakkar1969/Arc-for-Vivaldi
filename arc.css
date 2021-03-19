@@ -4,8 +4,11 @@
 body {
 	--clrArcWindowLight: #e7e8eb;
 	--clrArcWindowDark: #2f343f;
+	--clrArcBgAlphaDark: #383c4acc;
 	--clrArcBorderLight: #d4d5db;
 	--clrArcBorderDark: #262a33;
+	--clrArcTextDark: #d3dae3;
+	--clrArcEmphasisTextLight: #000000;
 }
 
 /***********************************************************************
@@ -58,8 +61,8 @@ body {
 
 /* Dark text/icon color for Darker theme */
 .theme-light.acc-dark #tabs-container.bottom {
-	color: #000000;
-	fill: #000000;
+	color: var(--clrArcEmphasisTextLight);
+	fill: var(--clrArcEmphasisTextLight);
 }
 
 /***********************************************************************
@@ -133,7 +136,7 @@ body {
 }
 
 .theme-light.acc-dark #tabs-container.top .tab-position .tab:hover:not(.active) {
-	background-color: #383c4acc;
+	background-color: var(--clrArcBgAlphaDark);
 }
 
 /***********************************************************************
@@ -172,6 +175,6 @@ body {
 
 /* Light text/icons when addressbar is merged with header for Darker theme */
 #browser.theme-light.acc-dark.address-top:not(.tabs-top) .toolbar-mainbar {
-	color: #d3dae3;
-	fill: #d3dae3;
+	color: var(--clrArcTextDark);
+	fill: var(--clrArcTextDark);
 }
