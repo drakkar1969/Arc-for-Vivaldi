@@ -116,3 +116,37 @@ body {
 #tabs-container.bottom .tab-position .tab.active {
 	margin-top: -1px;
 }
+
+/***********************************************************************
+	ADDRESSBAR TOP
+***********************************************************************/
+/* Merge addressbar with header if tabs are not on top */
+#browser.address-top:not(.tabs-top) #main {
+	margin-top: -25px;
+}
+
+#browser.address-top:not(.tabs-top) #titlebar {
+	z-index: 1;
+}
+
+#browser.address-top:not(.tabs-top) .toolbar-mainbar.UrlBar {
+	padding: 0 90px 0 40px;
+}
+
+#browser.alt.address-top:not(.tabs-top) .toolbar-mainbar.UrlBar {
+	padding: 0 40px 0 90px;
+}
+
+#browser.address-top:not(.tabs-top) #titlebar #pagetitle {
+	display: none;
+}
+
+/* Make addressbar same color as header if tabs are not on top */
+#browser.address-top:not(.tabs-top) .toolbar-mainbar {
+	background: var(--clrArcWindowLight);
+}
+
+#browser.theme-dark.address-top:not(.tabs-top) .toolbar-mainbar,
+#browser.theme-light.acc-dark.address-top:not(.tabs-top) .toolbar-mainbar {
+	background: var(--clrArcWindowDark);
+}
