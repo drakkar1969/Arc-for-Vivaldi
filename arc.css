@@ -182,6 +182,41 @@ body {
 }
 
 /***********************************************************************
+	ADDRESSBAR BOTTOM
+***********************************************************************/
+/* Background color */
+#browser.address-bottom:not(.tabs-bottom) .toolbar-mainbar {
+	background-color: var(--clrArcWindowLight);
+}
+
+#browser.theme-dark.address-bottom:not(.tabs-bottom) .toolbar-mainbar {
+	background-color: var(--clrArcWindowDark);
+}
+
+/* Remove box shadow and add top border */
+#browser.address-bottom .toolbar-mainbar {
+	box-shadow: none;
+}
+
+#browser.address-bottom:not(.tabs-bottom) .toolbar-mainbar {
+	box-shadow: none;
+	border-top: 1px solid var(--clrArcBorderLight);
+}
+
+#browser.theme-dark.address-bottom:not(.tabs-bottom) .toolbar-mainbar {
+	border-top: 1px solid var(--clrArcBorderDark);
+}
+
+#browser.address-bottom.tabs-bottom .toolbar-mainbar.UrlBar {
+	box-shadow: none;
+	border-top: 1px solid var(--clrArcBorderLight);
+}
+
+#browser.theme-dark.address-bottom.tabs-bottom .toolbar-mainbar.UrlBar {
+	border-top: 1px solid var(--clrArcBorderDark);
+}
+
+/***********************************************************************
 	HEADER
 ***********************************************************************/
 /* Background/bottom border */
