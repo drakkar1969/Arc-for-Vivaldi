@@ -287,3 +287,8 @@ body {
 #browser.theme-light.acc-dark:not(.tabs-top) #titlebar #pagetitle {
 	color: var(--clrArcHeaderTextDark);
 }
+
+/* Vivaldi menu button color for Darker theme */
+#browser.theme-light.acc-dark:not(.tabs-top) .vivaldi {
+	fill: var(--clrArcTextDark);
+}
