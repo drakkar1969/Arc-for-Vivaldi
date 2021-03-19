@@ -56,6 +56,12 @@ body {
 	border-top: 1px solid var(--clrArcBorderDark) !important;
 }
 
+/* Dark text/icon color for Darker theme */
+.theme-light.acc-dark #tabs-container.bottom {
+	color: #000000;
+	fill: #000000;
+}
+
 /***********************************************************************
 	TABS ANY
 ***********************************************************************/
