@@ -118,6 +118,19 @@ body {
 }
 
 /***********************************************************************
+	TABS TOP/BOTTOM
+***********************************************************************/
+/* Inactive tab hover color when tab strip is dark */
+.theme-dark #tabs-container.top .tab-position .tab:hover:not(.active),
+.theme-dark #tabs-container.bottom .tab-position .tab:hover:not(.active) {
+	background-color: var(--colorBgAlpha);
+}
+
+.theme-light.acc-dark #tabs-container.top .tab-position .tab:hover:not(.active) {
+	background-color: #383c4acc;
+}
+
+/***********************************************************************
 	ADDRESSBAR TOP
 ***********************************************************************/
 /* Merge addressbar with header if tabs are not on top */
