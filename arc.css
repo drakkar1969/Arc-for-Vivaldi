@@ -169,3 +169,9 @@ body {
 #browser.theme-light.acc-dark.address-top:not(.tabs-top) .toolbar-mainbar {
 	background: var(--clrArcWindowDark);
 }
+
+/* Light text/icons when addressbar is merged with header for Darker theme */
+#browser.theme-light.acc-dark.address-top:not(.tabs-top) .toolbar-mainbar {
+	color: #d3dae3;
+	fill: #d3dae3;
+}
