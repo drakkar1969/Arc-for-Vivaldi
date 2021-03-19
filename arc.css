@@ -9,6 +9,8 @@ body {
 	--clrArcBorderDark: #262a33;
 	--clrArcTextDark: #d3dae3;
 	--clrArcEmphasisTextLight: #000000;
+	--clrArcHeaderTextLight: #525d76cc;
+	--clrArcHeaderTextDark: #cfdae3cc;
 }
 
 /***********************************************************************
@@ -193,4 +195,14 @@ body {
 #browser.theme-light.acc-dark:not(.tabs-top) #header {
 	background-color: var(--clrArcWindowDark) !important;
 	border-bottom: 1px solid var(--clrArcBorderDark) !important;
+}
+
+/* Header title color */
+#browser:not(.tabs-top) #titlebar #pagetitle {
+	color: var(--clrArcHeaderTextLight);
+}
+
+#browser.theme-dark:not(.tabs-top) #titlebar #pagetitle,
+#browser.theme-light.acc-dark:not(.tabs-top) #titlebar #pagetitle {
+	color: var(--clrArcHeaderTextDark);
 }
