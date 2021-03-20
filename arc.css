@@ -11,6 +11,8 @@ body {
 	--clrArcEmphasisTextLight: #000000;
 	--clrArcHeaderTextLight: #525d76cc;
 	--clrArcHeaderTextDark: #cfdae3cc;
+	--clrArcUrlTextDark: #a7adb6;
+	--clrArcUrlDomainTextDark: #f9ffff;
 	--clrArcInputBorder: #242836;
 }
 
@@ -238,14 +240,40 @@ body {
 /***********************************************************************
 	ADDRESSFIELD TOP
 ***********************************************************************/
-/* Addressfield colors when tabs are not on top (Darker theme) */
+/* Addressfield colors when tabs are not on top for Darker theme */
 #browser.theme-light.acc-dark.address-top:not(.tabs-top) .UrlBar-AddressField {
 	background-color: var(--clrArcInputBorder);
 	border-color: var(--clrArcInputBorder);
+	color: var(--clrArcTextDark);
 }
 
 #browser.theme-light.acc-dark.address-top:not(.tabs-top) .UrlBar-AddressField:focus-within {
 	border-color: var(--colorHighlightBg);
+}
+
+/*  Url text colors when tabs are not on top for Darker theme */
+#browser.theme-light.acc-dark.address-top:not(.tabs-top) .UrlFragment-Wrapper--ShouldHighlight {
+	--HighlightColor: var(--clrArcUrlDomainTextDark);
+	--LowlightColor: var(--clrArcUrlTextDark);
+}
+
+#browser.theme-light.acc-dark.address-top:not(.tabs-top) .UrlFragment-Wrapper:not(.UrlFragment-Wrapper--ShouldHighlight) {
+	--HighlightColor: var(--clrArcUrlDomainTextDark);
+	--LowlightColor: var(--clrArcUrlDomainTextDark);
+}
+
+/* Pageload text colors when tabs are not on top for Darker theme */
+#browser.theme-light.acc-dark.address-top:not(.tabs-top) .UrlBar-AddressField .pageload {
+	color: var(--clrArcTextDark);
+}
+
+/* Pageload progressbar color when tabs are not on top for Darker theme */
+#browser.theme-light.acc-dark.address-top:not(.tabs-top) .UrlBar-AddressField .pageload .pageload-indicator {
+	background-color: var(--clrArcWindowDark);
+}
+
+#browser.theme-light.acc-dark.address-top:not(.tabs-top) .UrlBar-AddressField .pageload .pageload-indicator::-webkit-progress-value {
+	background-color: var(--clrArcInputBorder);
 }
 
 /***********************************************************************
