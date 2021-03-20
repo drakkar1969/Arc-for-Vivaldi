@@ -22,8 +22,8 @@ body {
 	--clrArcEmphasisTextLight: #000000;
 	--clrArcUrlTextDark: #a7adb6;
 	--clrArcUrlDomainTextDark: #f9ffff;
-	--clrArcInputBg: #242836;
-	--clrArcInputBorder: #242836;
+	--clrArcInputBg: #404552;
+	--clrArcInputBorder: #2b2e39;
 	--clrArcAddressProgressBg: #242836;
 }
 
@@ -257,6 +257,16 @@ body {
 /***********************************************************************
 	ADDRESSFIELD ANY
 ***********************************************************************/
+/* Addressfield colors for Dark theme */
+#browser.theme-dark .UrlBar-AddressField {
+	background-color: var(--clrArcInputBg);
+	border-color: var(--clrArcInputBorder);
+}
+
+#browser.theme-dark .UrlBar-AddressField:focus-within {
+	border-color: var(--colorHighlightBg);
+}
+
 /* Pageload progressbar color for Darker theme */
 #browser.theme-light.acc-dark .UrlBar-AddressField .pageload .pageload-indicator {
 	background-color: var(--clrArcBgLight);
@@ -314,9 +324,22 @@ body {
 }
 
 /***********************************************************************
+	SEARCHFIELD ANY
+***********************************************************************/
+/* Searchfield colors for Dark theme */
+#browser.theme-dark .UrlBar-SearchField {
+	background-color: var(--clrArcInputBg);
+	border-color: var(--clrArcInputBorder);
+}
+
+#browser.theme-dark .UrlBar-SearchField:focus-within {
+	border-color: var(--colorHighlightBg);
+}
+
+/***********************************************************************
 	SEARCHFIELD TOP
 ***********************************************************************/
-/* Searchfield colors when tabs are not on top (Darker theme) */
+/* Searchfield colors when tabs are not on top for Darker theme */
 #browser.theme-light.acc-dark.address-top:not(.tabs-top) .UrlBar-SearchField {
 	background-color: var(--clrArcInputBg);
 	border-color: var(--clrArcInputBorder);
