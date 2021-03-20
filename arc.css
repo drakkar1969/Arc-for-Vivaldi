@@ -80,7 +80,8 @@ body {
 /* Tab title font + right fade */
 .tab-position .tab .title {
 	font-size: 13px;
-	-webkit-mask-image: -webkit-linear-gradient(180deg, transparent 0px, transparent 6px, #fff 14px);
+	-webkit-mask-image: -webkit-linear-gradient(180deg, transparent 0px, transparent 6px, #fff 10px);
+	margin-right: 0px;
 }
 
 /***********************************************************************
