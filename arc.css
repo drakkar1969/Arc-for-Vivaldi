@@ -276,6 +276,11 @@ body {
 	background-color: var(--clrArcInputBorder);
 }
 
+/* Bookmark button when tabs are not on top for Darker theme */
+#browser.theme-light.acc-dark.address-top:not(.tabs-top) .bookmark-animated-fill {
+	fill: var(--colorAccentFgFaded);
+}
+
 /***********************************************************************
 	SEARCHFIELD TOP
 ***********************************************************************/
