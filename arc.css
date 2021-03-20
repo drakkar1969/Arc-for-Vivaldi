@@ -22,7 +22,9 @@ body {
 	--clrArcEmphasisTextLight: #000000;
 	--clrArcUrlTextDark: #a7adb6;
 	--clrArcUrlDomainTextDark: #f9ffff;
+	--clrArcInputBg: #242836;
 	--clrArcInputBorder: #242836;
+	--clrArcAddressProgressBg: #242836;
 }
 
 /***********************************************************************
@@ -272,7 +274,7 @@ body {
 ***********************************************************************/
 /* Addressfield colors when tabs are not on top for Darker theme */
 #browser.theme-light.acc-dark.address-top:not(.tabs-top) .UrlBar-AddressField {
-	background-color: var(--clrArcInputBorder);
+	background-color: var(--clrArcInputBg);
 	border-color: var(--clrArcInputBorder);
 	color: var(--clrArcTextDark);
 }
@@ -303,7 +305,7 @@ body {
 }
 
 #browser.theme-light.acc-dark.address-top:not(.tabs-top) .UrlBar-AddressField .pageload .pageload-indicator::-webkit-progress-value {
-	background-color: var(--clrArcInputBorder);
+	background-color: var(--clrArcAddressProgressBg);
 }
 
 /* Bookmark button when tabs are not on top for Darker theme */
@@ -316,7 +318,7 @@ body {
 ***********************************************************************/
 /* Searchfield colors when tabs are not on top (Darker theme) */
 #browser.theme-light.acc-dark.address-top:not(.tabs-top) .UrlBar-SearchField {
-	background-color: var(--clrArcInputBorder);
+	background-color: var(--clrArcInputBg);
 	border-color: var(--clrArcInputBorder);
 	color: var(--clrArcTextDark);
 }
