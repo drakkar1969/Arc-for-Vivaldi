@@ -8,6 +8,11 @@ body {
 	--clrArcBorderDark: #262a33;
 	--clrArcHeaderTextLight: #525d76cc;
 	--clrArcHeaderTextDark: #cfdae3cc;
+	--clrArcSidebar: #353945;
+	--clrArcSidebarBorder: #2a2d37;
+	--clrArcSidebarText: #d3dae3;
+	--clrArcSidebarTextActive: #ffffff;
+	--clrArcSidebarHover: rgba(186, 195, 207, 0.15); /* #bac3cf */
 
 	/* Additional variables for Darker theme */
 	--clrArcBgLight: #dddee1;
@@ -349,4 +354,46 @@ body {
 /* Vivaldi menu button color for Darker theme */
 #browser.theme-light.acc-dark:not(.tabs-top) .vivaldi {
 	fill: var(--clrArcTextDark);
+}
+
+/***********************************************************************
+	SETTINGS PAGE
+***********************************************************************/
+/* Background/border/color */
+.vivaldi-settings .settings-sidebar {
+	background-color: var(--clrArcSidebar);
+	border-right: 1px solid var(--clrArcSidebar);
+	box-shadow: none;
+	color: var(--clrArcSidebarText);
+}
+
+#browser.theme-dark .vivaldi-settings .settings-sidebar {
+	border-right: 1px solid var(--clrArcSidebarBorder);
+}
+
+.vivaldi-settings .settings-sidebar .button-category {
+	fill: var(--clrArcSidebarText);
+}
+
+/* Hover button */
+.vivaldi-settings .settings-sidebar .button-category:hover:not(.category-selected) {
+	background: var(--clrArcSidebarHover);
+}
+
+/* Selected button */
+.vivaldi-settings .settings-sidebar .button-category.category-selected {
+	background-color: var(--colorHighlightBg);
+	border-top-color: transparent;
+	border-bottom-color: transparent;
+	color: var(--clrArcSidebarTextActive);
+	fill: var(--clrArcSidebarTextActive);
+}
+
+/* Focused button */
+.vivaldi-settings .settings-sidebar .settings-navigation:focus-within .tree-row[data-selected] .button-category:not(:active) {
+	background-color: var(--colorHighlightBg);
+	border-color: transparent;
+	box-shadow: none;
+	color: var(--clrArcSidebarTextActive);
+	fill: var(--clrArcSidebarTextActive);
 }
