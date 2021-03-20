@@ -2,17 +2,19 @@
 	COLOR VARIABLES
 ***********************************************************************/
 body {
-	--clrArcBgLight: #dddee1;
 	--clrArcWindowLight: #e7e8eb;
 	--clrArcWindowDark: #2f343f;
-	--clrArcBodyAlphaDark: #383c4acc;
 	--clrArcBorderLight: #d4d5db;
 	--clrArcBorderDark: #262a33;
+	--clrArcHeaderTextLight: #525d76cc;
+	--clrArcHeaderTextDark: #cfdae3cc;
+
+	/* Additional variables for Darker theme */
+	--clrArcBgLight: #dddee1;
+	--clrArcBodyAlphaDark: #383c4acc;
 	--clrArcTextFadedLight: #8c8c8e;
 	--clrArcTextDark: #d3dae3;
 	--clrArcEmphasisTextLight: #000000;
-	--clrArcHeaderTextLight: #525d76cc;
-	--clrArcHeaderTextDark: #cfdae3cc;
 	--clrArcUrlTextDark: #a7adb6;
 	--clrArcUrlDomainTextDark: #f9ffff;
 	--clrArcInputBorder: #242836;
