@@ -2,9 +2,10 @@
 	COLOR VARIABLES
 ***********************************************************************/
 body {
+	--clrArcBgLight: #dddee1;
 	--clrArcWindowLight: #e7e8eb;
 	--clrArcWindowDark: #2f343f;
-	--clrArcBgAlphaDark: #383c4acc;
+	--clrArcBodyAlphaDark: #383c4acc;
 	--clrArcBorderLight: #d4d5db;
 	--clrArcBorderDark: #262a33;
 	--clrArcTextDark: #d3dae3;
@@ -146,7 +147,7 @@ body {
 }
 
 .theme-light.acc-dark #tabs-container.top .tab-position .tab:hover:not(.active) {
-	background-color: var(--clrArcBgAlphaDark);
+	background-color: var(--clrArcBodyAlphaDark);
 }
 
 /***********************************************************************
@@ -235,6 +236,14 @@ body {
 
 #browser.theme-dark.address-bottom.tabs-bottom .toolbar-mainbar.UrlBar {
 	border-top: 1px solid var(--clrArcBorderDark);
+}
+
+/***********************************************************************
+	ADDRESSFIELD ANY
+***********************************************************************/
+/* Pageload progressbar color for Darker theme */
+#browser.theme-light.acc-dark .UrlBar-AddressField .pageload .pageload-indicator {
+	background-color: var(--clrArcBgLight);
 }
 
 /***********************************************************************
