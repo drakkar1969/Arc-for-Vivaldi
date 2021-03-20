@@ -8,6 +8,7 @@ body {
 	--clrArcBodyAlphaDark: #383c4acc;
 	--clrArcBorderLight: #d4d5db;
 	--clrArcBorderDark: #262a33;
+	--clrArcTextFadedLight: #8c8c8e;
 	--clrArcTextDark: #d3dae3;
 	--clrArcEmphasisTextLight: #000000;
 	--clrArcHeaderTextLight: #525d76cc;
@@ -135,6 +136,11 @@ body {
 /* Tab hover text color for Darker theme */
 .theme-light.acc-dark #tabs-container.bottom .tab-position .tab:hover:not(.active) {
 	color: var(--clrArcEmphasisTextLight);
+}
+
+/* Tab progress indicator for Darker theme */
+.theme-light.acc-dark #tabs-container.bottom .tab-position .tab .progress-indicator {
+	background-color: var(--clrArcTextFadedLight);
 }
 
 /***********************************************************************
