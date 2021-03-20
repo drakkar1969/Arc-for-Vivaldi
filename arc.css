@@ -422,3 +422,17 @@ body {
 	color: var(--clrArcSidebarTextActive);
 	fill: var(--clrArcSidebarTextActive);
 }
+
+/* Search field */
+.vivaldi-settings .settings-sidebar .settings-navigation-header {
+	padding: 15px 12px;
+}
+
+.settings-search {
+	background-color: var(--clrArcInputBg);
+	color: var(--clrArcTextDark);
+}
+
+.settings-search:not(:focus) {
+	border-color: var(--clrArcInputBorder) !important;
+}
