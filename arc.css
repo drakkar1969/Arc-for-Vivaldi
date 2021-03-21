@@ -349,6 +349,56 @@ body {
 }
 
 /***********************************************************************
+	PANEL
+***********************************************************************/
+/* Background */
+#panel_switch,
+#switch {
+	background-color: var(--clrArcSidebar);
+	box-shadow: none !important;
+}
+
+#panel_switch:hover {
+	background-color: var(--clrArcSidebarHover);
+}
+
+/* Toggle arrow color */
+#panel_switch svg polygon {
+	fill: var(--clrArcSidebarText);
+}
+
+/* Buttons */
+#switch > button,
+#switch .addwebpanel-wrapper > button {
+	box-shadow: none !important;
+	border: none !important;
+	color: var(--clrArcSidebarText);
+	fill: var(--clrArcSidebarText);
+}
+
+#switch > button:hover:not(.active),
+#switch .addwebpanel-wrapper > button:hover:not(.active) {
+	background-color: var(--clrArcSidebarHover) !important;
+}
+
+#switch > button:focus:not(.active),
+#switch .addwebpanel-wrapper > button:focus:not(.active) {
+	background-color: var(--clrArcSidebarHover) !important;
+}
+
+#switch > button:active:not(.active),
+#switch .addwebpanel-wrapper > button:active:not(.active) {
+	background-color: var(--clrArcSidebarHover) !important;
+}
+
+#switch > button.active,
+#switch > button.active:hover {
+	background-color: var(--colorBgLightIntense) !important;
+	color: var(--colorFgIntense);
+	fill: var(--colorFgIntense);
+}
+
+/***********************************************************************
 	SETTINGS PAGE
 ***********************************************************************/
 /* Background/border/color */
