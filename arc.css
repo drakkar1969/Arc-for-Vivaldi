@@ -28,16 +28,21 @@ body {
 }
 
 /***********************************************************************
-	TAB CONTAINER TOP
+	TAB CONTAINER
 ***********************************************************************/
 /* Background */
-#tabs-tabbar-container.top, #tabs-container.top {
+#tabs-tabbar-container,
+#tabs-container {
 	background-color: var(--clrArcWindowLight);
 }
 
-/* Dark background for Dark/Darker themes */
-.theme-dark #tabs-tabbar-container.top, .theme-dark #tabs-container.top,
-.theme-light.acc-dark #tabs-tabbar-container.top, .theme-light.acc-dark #tabs-container.top {
+.theme-dark #tabs-tabbar-container,
+.theme-dark #tabs-container {
+	background-color: var(--clrArcWindowDark);
+}
+
+.theme-light.acc-dark #tabs-tabbar-container.top,
+.theme-light.acc-dark #tabs-container.top {
 	background-color: var(--clrArcWindowDark);
 }
 
@@ -46,43 +51,27 @@ body {
 	border-bottom: 1px solid var(--clrArcBorderLight) !important;
 }
 
-/* Dark border for Dark/Darker themes */
 .theme-dark #tabs-tabbar-container.top,
 .theme-light.acc-dark #tabs-tabbar-container.top {
 	border-bottom: 1px solid var(--clrArcBorderDark) !important;
 }
 
-/***********************************************************************
-	TAB CONTAINER BOTTOM
-***********************************************************************/
-/* Background */
-#tabs-tabbar-container.bottom, #tabs-container.bottom {
-	background-color: var(--clrArcWindowLight);
-}
-
-/* Dark background for Dark theme */
-.theme-dark #tabs-tabbar-container.bottom, .theme-dark #tabs-container.bottom {
-	background-color: var(--clrArcWindowDark);
-}
-
-/* Border */
 #tabs-tabbar-container.bottom {
 	border-top: 1px solid var(--clrArcBorderLight) !important;
 }
 
-/* Dark border for Dark theme */
 .theme-dark #tabs-tabbar-container.bottom {
 	border-top: 1px solid var(--clrArcBorderDark) !important;
 }
 
-/* Dark text/icon color for Darker theme */
+/* Darker theme: dark text/icon color when tabs on bottom */
 .theme-light.acc-dark #tabs-container.bottom {
 	color: var(--clrArcEmphasisTextLight);
 	fill: var(--clrArcEmphasisTextLight);
 }
 
 /***********************************************************************
-	TABS ANY
+	TABS
 ***********************************************************************/
 /* Tab title font + right fade */
 .tab-position .tab .title {
@@ -91,23 +80,21 @@ body {
 	margin-right: 0px;
 }
 
-/***********************************************************************
-	TABS TOP
-***********************************************************************/
 /* Border around hover/active tab */
-#tabs-container.top .tab-position .tab {
+#tabs-container .tab-position .tab {
 	border: 1px solid transparent;
-	border-bottom-width: 0 !important;
 }
 
-#tabs-container.top .tab-position .tab:hover,
-#tabs-container.top .tab-position .tab.active {
+#tabs-container .tab-position .tab:hover,
+#tabs-container .tab-position .tab.active {
 	border: 1px solid var(--clrArcBorderLight);
 }
 
-/* Dark border for Dark/Darker themes */
-.theme-dark #tabs-container.top .tab-position .tab:hover,
-.theme-dark #tabs-container.top .tab-position .tab.active,
+.theme-dark #tabs-container .tab-position .tab:hover,
+.theme-dark #tabs-container .tab-position .tab.active {
+	border: 1px solid var(--clrArcBorderDark);
+}
+
 .theme-light.acc-dark #tabs-container.top .tab-position .tab:hover,
 .theme-light.acc-dark #tabs-container.top .tab-position .tab.active {
 	border: 1px solid var(--clrArcBorderDark);
@@ -115,48 +102,32 @@ body {
 
 /* Ensure active tab is on top of tab strip border */
 #tabs-container.top .tab-position .tab.active {
+	border-bottom-color: var(--colorBg) !important;
+}
+
+#tabs-container.bottom .tab-position .tab.active {
+	border-top-color: var(--colorBg) !important;
+}
+
+#tabs-container.top .tab-position .tab {
 	margin-bottom: -1px;
 }
 
-/***********************************************************************
-	TABS BOTTOM
-***********************************************************************/
-/* Border around hover/active tab */
 #tabs-container.bottom .tab-position .tab {
-	border: 1px solid transparent;
-	border-top-width: 0 !important;
-}
-
-#tabs-container.bottom .tab-position .tab:hover,
-#tabs-container.bottom .tab-position .tab.active {
-	border: 1px solid var(--clrArcBorderLight);
-}
-
-/* Dark border for Dark theme */
-.theme-dark #tabs-container.bottom .tab-position .tab:hover,
-.theme-dark #tabs-container.bottom .tab-position .tab.active {
-	border: 1px solid var(--clrArcBorderDark);
-}
-
-/* Ensure active tab is on top of tab strip border */
-#tabs-container.bottom .tab-position .tab.active {
 	margin-top: -1px;
 }
 
-/* Tab hover text color for Darker theme */
+/* Darker theme: tab hover text color when tabs on bottom */
 .theme-light.acc-dark #tabs-container.bottom .tab-position .tab:hover:not(.active) {
 	color: var(--clrArcEmphasisTextLight);
 }
 
-/* Tab progress indicator for Darker theme */
+/* Darker theme: tab progress indicator when tabs on bottom */
 .theme-light.acc-dark #tabs-container.bottom .tab-position .tab .progress-indicator {
 	background-color: var(--clrArcTextFadedLight);
 }
 
-/***********************************************************************
-	TABS TOP/BOTTOM
-***********************************************************************/
-/* Inactive tab hover color when tab strip is dark */
+/* Dark/Darker theme: inactive tab hover color */
 .theme-dark #tabs-container.top .tab-position .tab:hover:not(.active),
 .theme-dark #tabs-container.bottom .tab-position .tab:hover:not(.active) {
 	background-color: var(--colorBgAlpha);
@@ -167,9 +138,9 @@ body {
 }
 
 /***********************************************************************
-	ADDRESSBAR TOP
+	ADDRESSBAR
 ***********************************************************************/
-/* Merge addressbar with header if tabs are not on top */
+/* Merge addressbar on top with header if tabs are not on top */
 #browser.address-top:not(.tabs-top) #main {
 	margin-top: -25px;
 }
@@ -190,7 +161,7 @@ body {
 	display: none;
 }
 
-/* Make addressbar same color as header if tabs are not on top */
+/* Background: addressbar on top same color as header if tabs are not on top */
 #browser.address-top:not(.tabs-top) .toolbar-mainbar {
 	background: var(--clrArcWindowLight);
 }
@@ -200,7 +171,16 @@ body {
 	background: var(--clrArcWindowDark);
 }
 
-/* Bottom border color */
+/* Background: addressbar on bottom if tabs are not on bottom */
+#browser.address-bottom:not(.tabs-bottom) .toolbar-mainbar {
+	background-color: var(--clrArcWindowLight);
+}
+
+#browser.theme-dark.address-bottom:not(.tabs-bottom) .toolbar-mainbar {
+	background-color: var(--clrArcWindowDark);
+}
+
+/* Border (addressbar on top) */
 #browser.address-top .toolbar-mainbar:after {
 	background-color: var(--clrArcBorderLight);
 }
@@ -213,25 +193,7 @@ body {
 	background-color: var(--clrArcBorderDark);
 }
 
-/* Light text/icons when addressbar is merged with header for Darker theme */
-#browser.theme-light.acc-dark.address-top:not(.tabs-top) .toolbar-mainbar {
-	color: var(--clrArcTextDark);
-	fill: var(--clrArcTextDark);
-}
-
-/***********************************************************************
-	ADDRESSBAR BOTTOM
-***********************************************************************/
-/* Background color */
-#browser.address-bottom:not(.tabs-bottom) .toolbar-mainbar {
-	background-color: var(--clrArcWindowLight);
-}
-
-#browser.theme-dark.address-bottom:not(.tabs-bottom) .toolbar-mainbar {
-	background-color: var(--clrArcWindowDark);
-}
-
-/* Remove box shadow and add top border */
+/* Border (addressbar on bottom) */
 #browser.address-bottom .toolbar-mainbar {
 	box-shadow: none;
 }
@@ -254,46 +216,32 @@ body {
 	border-top: 1px solid var(--clrArcBorderDark);
 }
 
-/***********************************************************************
-	ADDRESSFIELD ANY
-***********************************************************************/
-/* Addressfield colors for Dark theme */
-#browser.theme-dark .UrlBar-AddressField {
-	background-color: var(--clrArcInputBg);
-	border-color: var(--clrArcInputBorder);
-}
-
-#browser.theme-dark .UrlBar-AddressField:focus-within {
-	border-color: var(--colorHighlightBg);
-}
-
-/* Pageload progressbar color for Darker theme */
-#browser.theme-light.acc-dark .UrlBar-AddressField .pageload .pageload-indicator {
-	background-color: var(--clrArcBgLight);
-}
-
-/* Bookmark button */
-.bookmark-animated-fill,
-#browser.theme-dark .bookmark-animated-fill,
-#browser.theme-dark.acc-dark .bookmark-animated-fill {
-	fill: var(--colorFg);
+/* Darker theme: light text/icons when addressbar is merged with header */
+#browser.theme-light.acc-dark.address-top:not(.tabs-top) .toolbar-mainbar {
+	color: var(--clrArcTextDark);
+	fill: var(--clrArcTextDark);
 }
 
 /***********************************************************************
-	ADDRESSFIELD TOP
+	ADDRESSFIELD
 ***********************************************************************/
-/* Addressfield colors when tabs are not on top for Darker theme */
+/* Dark/Darker themes: Addressfield input box */
+#browser.theme-dark .UrlBar-AddressField,
 #browser.theme-light.acc-dark.address-top:not(.tabs-top) .UrlBar-AddressField {
 	background-color: var(--clrArcInputBg);
 	border-color: var(--clrArcInputBorder);
-	color: var(--clrArcTextDark);
 }
 
+#browser.theme-dark .UrlBar-AddressField:focus-within,
 #browser.theme-light.acc-dark.address-top:not(.tabs-top) .UrlBar-AddressField:focus-within {
 	border-color: var(--colorHighlightBg);
 }
 
-/*  Url text colors when tabs are not on top for Darker theme */
+/* Darker theme: Addressfield/URL text colors when addressbar is on top and tabs are not on top */
+#browser.theme-light.acc-dark.address-top:not(.tabs-top) .UrlBar-AddressField {
+	color: var(--clrArcTextDark);
+}
+
 #browser.theme-light.acc-dark.address-top:not(.tabs-top) .UrlFragment-Wrapper--ShouldHighlight {
 	--HighlightColor: var(--clrArcUrlDomainTextDark);
 	--LowlightColor: var(--clrArcUrlTextDark);
@@ -304,12 +252,12 @@ body {
 	--LowlightColor: var(--clrArcUrlDomainTextDark);
 }
 
-/* Pageload text colors when tabs are not on top for Darker theme */
-#browser.theme-light.acc-dark.address-top:not(.tabs-top) .UrlBar-AddressField .pageload {
-	color: var(--clrArcTextDark);
+/* Darker theme: Pageload progressbar color */
+#browser.theme-light.acc-dark .UrlBar-AddressField .pageload .pageload-indicator {
+	background-color: var(--clrArcBgLight);
 }
 
-/* Pageload progressbar color when tabs are not on top for Darker theme */
+/* Darker theme: Pageload progressbar color when addressbaris on top and tabs are not on top */
 #browser.theme-light.acc-dark.address-top:not(.tabs-top) .UrlBar-AddressField .pageload .pageload-indicator {
 	background-color: var(--clrArcWindowDark);
 }
@@ -318,42 +266,47 @@ body {
 	background-color: var(--clrArcAddressProgressBg);
 }
 
-/* Bookmark button when tabs are not on top for Darker theme */
+/* Darker theme: Pageload text colors when addressbar si on top and  tabs are not on top */
+#browser.theme-light.acc-dark.address-top:not(.tabs-top) .UrlBar-AddressField .pageload {
+	color: var(--clrArcTextDark);
+}
+
+/* Bookmark button */
+.bookmark-animated-fill,
+#browser.theme-dark .bookmark-animated-fill,
+#browser.theme-dark.acc-dark .bookmark-animated-fill {
+	fill: var(--colorFg);
+}
+
+/* Darker theme: Bookmark button when addressbar is on top and tabs are not on top */
 #browser.theme-light.acc-dark.address-top:not(.tabs-top) .bookmark-animated-fill {
 	fill: var(--clrArcTextDark);
 }
 
 /***********************************************************************
-	SEARCHFIELD ANY
+	SEARCHFIELD
 ***********************************************************************/
-/* Searchfield colors for Dark theme */
-#browser.theme-dark .UrlBar-SearchField {
-	background-color: var(--clrArcInputBg);
-	border-color: var(--clrArcInputBorder);
-}
-
-#browser.theme-dark .UrlBar-SearchField:focus-within {
-	border-color: var(--colorHighlightBg);
-}
-
-/***********************************************************************
-	SEARCHFIELD TOP
-***********************************************************************/
-/* Searchfield colors when tabs are not on top for Darker theme */
+/* Dark/Darker themes: Searchfield input box */
+#browser.theme-dark .UrlBar-SearchField,
 #browser.theme-light.acc-dark.address-top:not(.tabs-top) .UrlBar-SearchField {
 	background-color: var(--clrArcInputBg);
 	border-color: var(--clrArcInputBorder);
-	color: var(--clrArcTextDark);
 }
 
+#browser.theme-dark .UrlBar-SearchField:focus-within,
 #browser.theme-light.acc-dark.address-top:not(.tabs-top) .UrlBar-SearchField:focus-within {
 	border-color: var(--colorHighlightBg);
+}
+
+/* Darker theme: Searchfield text color when addressbar is on top and tabs are not on top */
+#browser.theme-light.acc-dark.address-top:not(.tabs-top) .UrlBar-SearchField {
+	color: var(--clrArcTextDark);
 }
 
 /***********************************************************************
 	HEADER
 ***********************************************************************/
-/* Background/bottom border */
+/* Background/border */
 #browser:not(.tabs-top) #header {
 	background-color: var(--clrArcWindowLight) !important;
 	border-bottom: 1px solid var(--clrArcBorderLight) !important;
@@ -366,7 +319,7 @@ body {
 	border-bottom: 1px solid var(--clrArcBorderDark) !important;
 }
 
-/* Header title color */
+/* Page title color */
 #browser:not(.tabs-top) #titlebar #pagetitle {
 	color: var(--clrArcHeaderTextLight);
 }
@@ -376,7 +329,7 @@ body {
 	color: var(--clrArcHeaderTextDark);
 }
 
-/* Vivaldi menu button color for Darker theme */
+/* Darker theme: Vivaldi menu button color */
 #browser.theme-light.acc-dark:not(.tabs-top) .vivaldi {
 	fill: var(--clrArcTextDark);
 }
