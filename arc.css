@@ -546,3 +546,9 @@ body {
 	background-color: transparent;
 	border-color: transparent;
 }
+
+/* Hidden extension button background when expanded */
+.color-behind-tabs-on .toolbar-mainbar > .button-toolbar > button.button-pressed,
+.color-behind-tabs-on .toolbar-mainbar > .button-toolbar > button.button-pressed:active {
+	background-image: none;
+}
