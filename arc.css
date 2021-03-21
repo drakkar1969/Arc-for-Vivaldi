@@ -29,6 +29,7 @@ body {
 	--clrArcToolbtnBgActiveDark: var(--colorHighlightBg);
 	--clrArcToolbtnBorderActiveDark: #2b2e39;
 	--clrArcToolbtnActiveText: #ffffff;
+	--clrArcToolbtnBadge: #8a9199;
 
 	/* Additional variables for Darker theme */
 	--colorAccentBg_Darker: #dddee1;
@@ -551,4 +552,9 @@ body {
 .color-behind-tabs-on .toolbar-mainbar > .button-toolbar > button.button-pressed,
 .color-behind-tabs-on .toolbar-mainbar > .button-toolbar > button.button-pressed:active {
 	background-image: none;
+}
+
+/* Extension button badges */
+.button-badge {
+	background-color: var(--clrArcToolbtnBadge);
 }
