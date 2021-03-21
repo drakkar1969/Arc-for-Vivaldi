@@ -17,6 +17,8 @@ body {
 	--clrArcSidebarTextActive: #ffffff;
 	--clrArcSidebarHover: rgba(186, 195, 207, 0.15); /* #bac3cf */
 
+	--clrArcInputBgLight: #ffffff;
+	--clrArcInputBorderLight: #cfd6e6;
 	--clrArcInputBgDark: #404552;
 	--clrArcInputBorderDark: #2b2e39;
 
@@ -239,7 +241,12 @@ body {
 /***********************************************************************
 	ADDRESSFIELD
 ***********************************************************************/
-/* Dark/Darker themes: Addressfield input box */
+/* Addressfield input box */
+.color-behind-tabs-on .UrlBar-AddressField {
+	background-color: var(--clrArcInputBgLight);
+	border-color: var(--clrArcInputBorderLight);
+}
+
 #browser.theme-dark .UrlBar-AddressField,
 #browser.theme-light.acc-dark.address-top:not(.tabs-top) .UrlBar-AddressField {
 	background-color: var(--clrArcInputBgDark);
@@ -305,7 +312,12 @@ body {
 /***********************************************************************
 	SEARCHFIELD
 ***********************************************************************/
-/* Dark/Darker themes: Searchfield input box */
+/* Searchfield input box */
+.color-behind-tabs-on .UrlBar-SearchField {
+	background-color: var(--clrArcInputBgLight);
+	border-color: var(--clrArcInputBorderLight);
+}
+
 #browser.theme-dark .UrlBar-SearchField,
 #browser.theme-light.acc-dark.address-top:not(.tabs-top) .UrlBar-SearchField {
 	background-color: var(--clrArcInputBgDark);
@@ -420,7 +432,8 @@ body {
 /* Searchfield */
 .sdwrapper .iconmenu-container.SearchField {
 	box-shadow: none;
-	border: 1px solid var(--colorBorder);
+	background-color: var(--clrArcInputBgLight);
+	border: 1px solid var(--clrArcInputBorderLight);
 }
 
 .sdwrapper .iconmenu-container.SearchField:focus-within {
