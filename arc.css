@@ -20,6 +20,16 @@ body {
 	--clrArcInputBgDark: #404552;
 	--clrArcInputBorderDark: #2b2e39;
 
+	--clrArcToolbtnBgHoverLight: #ffffff;
+	--clrArcToolbtnBorderHoverLight: #cfd6e6;
+	--clrArcToolbtnBgHoverDark: #505666;
+	--clrArcToolbtnBorderHoverDark: #2b2e39;
+	--clrArcToolbtnBgActiveLight: var(--colorHighlightBg);
+	--clrArcToolbtnBorderActiveLight: var(--colorHighlightBg);
+	--clrArcToolbtnBgActiveDark: var(--colorHighlightBg);
+	--clrArcToolbtnBorderActiveDark: #2b2e39;
+	--clrArcToolbtnActiveText: #ffffff;
+
 	/* Additional variables for Darker theme */
 	--colorAccentBg_Darker: #dddee1;
 	--colorAccentFg_Darker: #000000;
@@ -223,12 +233,6 @@ body {
 
 #browser.theme-dark.address-bottom.tabs-bottom .toolbar-mainbar.UrlBar {
 	border-top: 1px solid var(--clrArcBorderDark);
-}
-
-/* Darker theme: light text/icons when addressbar is merged with header */
-#browser.theme-light.acc-dark.address-top:not(.tabs-top) .toolbar-mainbar {
-	color: var(--colorFg_Darker);
-	fill: var(--colorFg_Darker);
 }
 
 /***********************************************************************
@@ -453,4 +457,65 @@ body {
 
 .settings-search:not(:focus) {
 	border-color: var(--clrArcInputBorderDark) !important;
+}
+
+/***********************************************************************
+	TOOLBAR BUTTONS
+***********************************************************************/
+.toolbar-mainbar > .button-toolbar > button,
+.toolbar-mainbar > .toolbar-group > .button-toolbar > button,
+.color-behind-tabs-on .bookmark-bar button {
+	border: 1px solid transparent;
+	border-radius: 2px;
+	font-size: 1.1em;
+}
+
+#browser.theme-light.acc-dark.address-top:not(.tabs-top) .toolbar-mainbar > .button-toolbar > button,
+#browser.theme-light.acc-dark.address-top:not(.tabs-top) .toolbar-mainbar > .toolbar-group > .button-toolbar > button {
+	color: var(--colorFg_Darker);
+}
+
+/* Hover */
+.toolbar-mainbar > .button-toolbar > button:hover,
+.toolbar-mainbar > .toolbar-group > .button-toolbar > button:hover,
+.color-behind-tabs-on .bookmark-bar button:hover {
+	background-color: var(--clrArcToolbtnBgHoverLight);
+	border-color: var(--clrArcToolbtnBorderHoverLight);
+}
+
+#browser.theme-dark .toolbar-mainbar > .button-toolbar > button:hover,
+#browser.theme-dark .toolbar-mainbar > .toolbar-group > .button-toolbar > button:hover,
+#browser.theme-dark.color-behind-tabs-on .bookmark-bar button:hover {
+	background-color: var(--clrArcToolbtnBgHoverDark);
+	border-color: var(--clrArcToolbtnBorderHoverDark);
+}
+
+#browser.theme-light.acc-dark.address-top:not(.tabs-top) .toolbar-mainbar > .button-toolbar > button:hover,
+#browser.theme-light.acc-dark.address-top:not(.tabs-top) .toolbar-mainbar > .toolbar-group > .button-toolbar > button:hover {
+	background-color: var(--clrArcToolbtnBgHoverDark);
+	border-color: var(--clrArcToolbtnBorderHoverDark);
+}
+
+/* Active */
+.toolbar-mainbar > .button-toolbar > button:active,
+.toolbar-mainbar > .toolbar-group > .button-toolbar > button:active,
+.color-behind-tabs-on .bookmark-bar button:active {
+	background-color: var(--clrArcToolbtnBgActiveLight);
+	border-color: var(--clrArcToolbtnBorderActiveLight);
+	color: var(--clrArcToolbtnActiveText);
+}
+
+#browser.theme-dark .toolbar-mainbar > .button-toolbar > button:active,
+#browser.theme-dark .toolbar-mainbar > .toolbar-group > .button-toolbar > button:active,
+#browser.theme-dark.color-behind-tabs-on .bookmark-bar button:active {
+	background-color: var(--clrArcToolbtnBgActiveDark);
+	border-color: var(--clrArcToolbtnBorderActiveDark);
+	color: var(--clrArcToolbtnActiveText);
+}
+
+#browser.theme-light.acc-dark.address-top:not(.tabs-top) .toolbar-mainbar > .button-toolbar > button:active,
+#browser.theme-light.acc-dark.address-top:not(.tabs-top) .toolbar-mainbar > .toolbar-group > .button-toolbar > button:active {
+	background-color: var(--clrArcToolbtnBgActiveDark);
+	border-color: var(--clrArcToolbtnBorderActiveDark);
+	color: var(--clrArcToolbtnActiveText);
 }
