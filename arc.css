@@ -539,3 +539,10 @@ body {
 .color-behind-tabs-on .bookmark-bar button:focus svg.folder-icon .fill-override {
 	fill: var(--clrArcToolbtnActiveText);
 }
+
+/* Remove highlight on bookmark toolbar separator hover */
+.color-behind-tabs-on .bookmark-bar button:hover:not([title]),
+.color-behind-tabs-on .bookmark-bar button:focus:not([title]) {
+	background-color: transparent;
+	border-color: transparent;
+}
