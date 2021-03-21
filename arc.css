@@ -558,3 +558,12 @@ body {
 .button-badge {
 	background-color: var(--clrArcToolbtnBadge);
 }
+
+/***********************************************************************
+	STATUS INFO OVERLAY
+***********************************************************************/
+#webview-container ~ .StatusInfo .StatusInfo-Content {
+	background-color: var(--colorHighlightBg);
+	color: var(--clrArcToolbtnActiveText);
+	border: 0;
+}
