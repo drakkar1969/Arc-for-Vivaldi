@@ -27,6 +27,7 @@ body {
 	--colorBgAlpha_Darker: #383c4acc;
 	--colorBgIntenser_Darker: #242836;
 	--colorFg_Darker: #d3dae3;
+	--colorFgFaded_Darker: #c9d0d9;
 	--colorFgFadedMost_Darker: #a7adb6;
 	--colorFgIntense_Darker: #f9ffff;
 }
@@ -258,6 +259,11 @@ body {
 #browser.theme-light.acc-dark.address-top:not(.tabs-top) .UrlFragment-Wrapper:not(.UrlFragment-Wrapper--ShouldHighlight) {
 	--HighlightColor: var(--colorFgIntense_Darker);
 	--LowlightColor: var(--colorFgIntense_Darker);
+}
+
+/* Darker theme: not secure site warning text */
+#browser.theme-light.acc-dark.address-top:not(.tabs-top) .SiteInfoButton.warning {
+	color: var(--colorFgFaded_Darker);
 }
 
 /* Darker theme: Pageload progressbar color */
