@@ -404,6 +404,31 @@ body {
 }
 
 /***********************************************************************
+	START PAGE
+***********************************************************************/
+/* Searchfield */
+.sdwrapper .iconmenu-container.SearchField {
+	box-shadow: none;
+	border: 1px solid var(--colorBorder);
+}
+
+.sdwrapper .iconmenu-container.SearchField:focus-within {
+	box-shadow: 0 0 0 1px var(--colorHighlightBg);
+	border: 1px solid var(--colorHighlightBg);
+}
+
+#browser.theme-dark .sdwrapper .iconmenu-container.SearchField {
+	box-shadow: none;
+	background-color: var(--clrArcInputBgDark);
+	border: 1px solid var(--clrArcInputBorderDark);
+}
+
+#browser.theme-dark .sdwrapper .iconmenu-container.SearchField:focus-within {
+	box-shadow: 0 0 0 1px var(--colorHighlightBg);
+	border: 1px solid var(--colorHighlightBg);
+}
+
+/***********************************************************************
 	SETTINGS PAGE
 ***********************************************************************/
 /* Background/border/color */
