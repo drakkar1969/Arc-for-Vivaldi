@@ -356,6 +356,15 @@ body {
 /***********************************************************************
 	PANEL
 ***********************************************************************/
+/* Width */
+#panels-container {
+	width: 38px !important;
+}
+
+#switch {
+	flex: 0 0 38px;
+}
+
 /* Background */
 #panel_switch,
 #switch {
@@ -375,6 +384,8 @@ body {
 /* Buttons */
 #switch > button,
 #switch .addwebpanel-wrapper > button {
+	width: 38px;
+	height: 38px;
 	box-shadow: none !important;
 	border: none !important;
 	color: var(--clrArcSidebarText);
