@@ -518,4 +518,10 @@ body {
 	background-color: var(--clrArcToolbtnBgActiveDark);
 	border-color: var(--clrArcToolbtnBorderActiveDark);
 	color: var(--clrArcToolbtnActiveText);
+
+}
+
+/* Fix folder icon color on hover/active states */
+.color-behind-tabs-on .bookmark-bar button:active svg.folder-icon .fill-override {
+	fill: var(--clrArcToolbtnActiveText);
 }
