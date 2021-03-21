@@ -404,6 +404,7 @@ body {
 /* Background/border/color */
 .vivaldi-settings .settings-sidebar {
 	background-color: var(--clrArcSidebar);
+	border-left: 1px solid var(--clrArcSidebarBorder);
 	border-right: 1px solid var(--clrArcSidebar);
 	box-shadow: none;
 	color: var(--clrArcSidebarText);
