@@ -2,29 +2,33 @@
 	COLOR VARIABLES
 ***********************************************************************/
 body {
+	/* Arc-specific color variables */
 	--clrArcWindowLight: #e7e8eb;
 	--clrArcWindowDark: #2f343f;
 	--clrArcBorderLight: #d4d5db;
 	--clrArcBorderDark: #262a33;
+
 	--clrArcHeaderTextLight: #525d76cc;
 	--clrArcHeaderTextDark: #cfdae3cc;
+
 	--clrArcSidebar: #353945;
 	--clrArcSidebarBorder: #2a2d37;
 	--clrArcSidebarText: #d3dae3;
 	--clrArcSidebarTextActive: #ffffff;
 	--clrArcSidebarHover: rgba(186, 195, 207, 0.15); /* #bac3cf */
 
+	--clrArcInputBgDark: #404552;
+	--clrArcInputBorderDark: #2b2e39;
+
 	/* Additional variables for Darker theme */
-	--clrArcBgLight: #dddee1;
-	--clrArcBodyAlphaDark: #383c4acc;
-	--clrArcTextFadedLight: #8c8c8e;
-	--clrArcTextDark: #d3dae3;
+	--colorAccentBg_Darker: #dddee1;
+	--colorAccentFgFaded_Darker: #8c8c8e;
+	--colorBgAlpha_Darker: #383c4acc;
+	--colorBgIntenser_Darker: #242836;
+	--colorFg_Darker: #d3dae3;
+	--colorFgFadedMost_Darker: #a7adb6;
+	--colorFgIntense_Darker: #f9ffff;
 	--clrArcEmphasisTextLight: #000000;
-	--clrArcUrlTextDark: #a7adb6;
-	--clrArcUrlDomainTextDark: #f9ffff;
-	--clrArcInputBg: #404552;
-	--clrArcInputBorder: #2b2e39;
-	--clrArcAddressProgressBg: #242836;
 }
 
 /***********************************************************************
@@ -124,7 +128,7 @@ body {
 
 /* Darker theme: tab progress indicator when tabs on bottom */
 .theme-light.acc-dark #tabs-container.bottom .tab-position .tab .progress-indicator {
-	background-color: var(--clrArcTextFadedLight);
+	background-color: var(--colorAccentFgFaded_Darker);
 }
 
 /* Dark/Darker theme: inactive tab hover color */
@@ -134,7 +138,7 @@ body {
 }
 
 .theme-light.acc-dark #tabs-container.top .tab-position .tab:hover:not(.active) {
-	background-color: var(--clrArcBodyAlphaDark);
+	background-color: var(--colorBgAlpha_Darker);
 }
 
 /***********************************************************************
@@ -218,8 +222,8 @@ body {
 
 /* Darker theme: light text/icons when addressbar is merged with header */
 #browser.theme-light.acc-dark.address-top:not(.tabs-top) .toolbar-mainbar {
-	color: var(--clrArcTextDark);
-	fill: var(--clrArcTextDark);
+	color: var(--colorFg_Darker);
+	fill: var(--colorFg_Darker);
 }
 
 /***********************************************************************
@@ -228,8 +232,8 @@ body {
 /* Dark/Darker themes: Addressfield input box */
 #browser.theme-dark .UrlBar-AddressField,
 #browser.theme-light.acc-dark.address-top:not(.tabs-top) .UrlBar-AddressField {
-	background-color: var(--clrArcInputBg);
-	border-color: var(--clrArcInputBorder);
+	background-color: var(--clrArcInputBgDark);
+	border-color: var(--clrArcInputBorderDark);
 }
 
 #browser.theme-dark .UrlBar-AddressField:focus-within,
@@ -239,22 +243,22 @@ body {
 
 /* Darker theme: Addressfield/URL text colors when addressbar is on top and tabs are not on top */
 #browser.theme-light.acc-dark.address-top:not(.tabs-top) .UrlBar-AddressField {
-	color: var(--clrArcTextDark);
+	color: var(--colorFg_Darker);
 }
 
 #browser.theme-light.acc-dark.address-top:not(.tabs-top) .UrlFragment-Wrapper--ShouldHighlight {
-	--HighlightColor: var(--clrArcUrlDomainTextDark);
-	--LowlightColor: var(--clrArcUrlTextDark);
+	--HighlightColor: var(--colorFgIntense_Darker);
+	--LowlightColor: var(--colorFgFadedMost_Darker);
 }
 
 #browser.theme-light.acc-dark.address-top:not(.tabs-top) .UrlFragment-Wrapper:not(.UrlFragment-Wrapper--ShouldHighlight) {
-	--HighlightColor: var(--clrArcUrlDomainTextDark);
-	--LowlightColor: var(--clrArcUrlDomainTextDark);
+	--HighlightColor: var(--colorFgIntense_Darker);
+	--LowlightColor: var(--colorFgIntense_Darker);
 }
 
 /* Darker theme: Pageload progressbar color */
 #browser.theme-light.acc-dark .UrlBar-AddressField .pageload .pageload-indicator {
-	background-color: var(--clrArcBgLight);
+	background-color: var(--colorAccentBg_Darker);
 }
 
 /* Darker theme: Pageload progressbar color when addressbaris on top and tabs are not on top */
@@ -263,12 +267,12 @@ body {
 }
 
 #browser.theme-light.acc-dark.address-top:not(.tabs-top) .UrlBar-AddressField .pageload .pageload-indicator::-webkit-progress-value {
-	background-color: var(--clrArcAddressProgressBg);
+	background-color: var(--colorBgIntenser_Darker);
 }
 
-/* Darker theme: Pageload text colors when addressbar si on top and  tabs are not on top */
+/* Darker theme: Pageload text colors when addressbar is on top and  tabs are not on top */
 #browser.theme-light.acc-dark.address-top:not(.tabs-top) .UrlBar-AddressField .pageload {
-	color: var(--clrArcTextDark);
+	color: var(--colorFg_Darker);
 }
 
 /* Bookmark button */
@@ -280,7 +284,7 @@ body {
 
 /* Darker theme: Bookmark button when addressbar is on top and tabs are not on top */
 #browser.theme-light.acc-dark.address-top:not(.tabs-top) .bookmark-animated-fill {
-	fill: var(--clrArcTextDark);
+	fill: var(--colorFg_Darker);
 }
 
 /***********************************************************************
@@ -289,8 +293,8 @@ body {
 /* Dark/Darker themes: Searchfield input box */
 #browser.theme-dark .UrlBar-SearchField,
 #browser.theme-light.acc-dark.address-top:not(.tabs-top) .UrlBar-SearchField {
-	background-color: var(--clrArcInputBg);
-	border-color: var(--clrArcInputBorder);
+	background-color: var(--clrArcInputBgDark);
+	border-color: var(--clrArcInputBorderDark);
 }
 
 #browser.theme-dark .UrlBar-SearchField:focus-within,
@@ -300,7 +304,7 @@ body {
 
 /* Darker theme: Searchfield text color when addressbar is on top and tabs are not on top */
 #browser.theme-light.acc-dark.address-top:not(.tabs-top) .UrlBar-SearchField {
-	color: var(--clrArcTextDark);
+	color: var(--colorFg_Darker);
 }
 
 /***********************************************************************
@@ -331,7 +335,7 @@ body {
 
 /* Darker theme: Vivaldi menu button color */
 #browser.theme-light.acc-dark:not(.tabs-top) .vivaldi {
-	fill: var(--clrArcTextDark);
+	fill: var(--colorFg_Darker);
 }
 
 /***********************************************************************
@@ -382,10 +386,10 @@ body {
 }
 
 .settings-search {
-	background-color: var(--clrArcInputBg);
-	color: var(--clrArcTextDark);
+	background-color: var(--clrArcInputBgDark);
+	color: var(--colorFg_Darker);
 }
 
 .settings-search:not(:focus) {
-	border-color: var(--clrArcInputBorder) !important;
+	border-color: var(--clrArcInputBorderDark) !important;
 }
