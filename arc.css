@@ -22,13 +22,13 @@ body {
 
 	/* Additional variables for Darker theme */
 	--colorAccentBg_Darker: #dddee1;
+	--colorAccentFg_Darker: #000000;
 	--colorAccentFgFaded_Darker: #8c8c8e;
 	--colorBgAlpha_Darker: #383c4acc;
 	--colorBgIntenser_Darker: #242836;
 	--colorFg_Darker: #d3dae3;
 	--colorFgFadedMost_Darker: #a7adb6;
 	--colorFgIntense_Darker: #f9ffff;
-	--clrArcEmphasisTextLight: #000000;
 }
 
 /***********************************************************************
@@ -70,8 +70,12 @@ body {
 
 /* Darker theme: dark text/icon color when tabs on bottom */
 .theme-light.acc-dark #tabs-container.bottom {
-	color: var(--clrArcEmphasisTextLight);
-	fill: var(--clrArcEmphasisTextLight);
+	color: var(--colorAccentFg_Darker);
+}
+
+.theme-light.acc-dark #tabs-container.bottom .newtab button,
+.theme-light.acc-dark #tabs-container.bottom .toolbar-tabbar.sync-and-trash-container button {
+	fill: var(--colorAccentFg_Darker);
 }
 
 /***********************************************************************
@@ -123,7 +127,7 @@ body {
 
 /* Darker theme: tab hover text color when tabs on bottom */
 .theme-light.acc-dark #tabs-container.bottom .tab-position .tab:hover:not(.active) {
-	color: var(--clrArcEmphasisTextLight);
+	color: var(--colorAccentFg_Darker);
 }
 
 /* Darker theme: tab progress indicator when tabs on bottom */
