@@ -546,6 +546,17 @@ body {
 	border-color: var(--clrArcToolbtnBorderHoverDark);
 }
 
+/* Focus */
+.color-behind-tabs-on .bookmark-bar button:focus {
+	background-color: var(--clrArcToolbtnBgHoverLight);
+	border-color: var(--clrArcToolbtnBorderHoverLight);
+}
+
+#browser.theme-dark.color-behind-tabs-on .bookmark-bar button:focus {
+	background-color: var(--clrArcToolbtnBgHoverDark);
+	border-color: var(--clrArcToolbtnBorderHoverDark);
+}
+
 /* Active */
 .toolbar-mainbar > .button-toolbar > button:active,
 .toolbar-mainbar > .toolbar-group > .button-toolbar > button:active,
@@ -568,25 +579,10 @@ body {
 	background-color: var(--clrArcToolbtnBgActiveDark);
 	border-color: var(--clrArcToolbtnBorderActiveDark);
 	color: var(--clrArcToolbtnActiveText);
-
-}
-
-/* Focus */
-.color-behind-tabs-on .bookmark-bar button:focus {
-	background-color: var(--clrArcToolbtnBgActiveLight);
-	border-color: var(--clrArcToolbtnBorderActiveLight);
-	color: var(--clrArcToolbtnActiveText);
-}
-
-#browser.theme-dark.color-behind-tabs-on .bookmark-bar button:focus {
-	background-color: var(--clrArcToolbtnBgActiveDark);
-	border-color: var(--clrArcToolbtnBorderActiveDark);
-	color: var(--clrArcToolbtnActiveText);
 }
 
 /* Fix folder icon color on hover/active states */
-.color-behind-tabs-on .bookmark-bar button:active svg.folder-icon .fill-override,
-.color-behind-tabs-on .bookmark-bar button:focus svg.folder-icon .fill-override {
+.color-behind-tabs-on .bookmark-bar button:active svg.folder-icon .fill-override {
 	fill: var(--clrArcToolbtnActiveText);
 }
 
