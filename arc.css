@@ -211,6 +211,11 @@ body {
 	filter: none;
 }
 
+/* Remove border around inactive tab when it is a stack header (two-level tab stacking) */
+.svg-tab-stack .inner {
+	stroke: transparent;
+}
+
 /***********************************************************************
 	ADDRESSBAR
 ***********************************************************************/
