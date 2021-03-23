@@ -10,6 +10,8 @@ body {
 
 	--clrArcHeaderTextLight: #525d76cc;
 	--clrArcHeaderTextDark: #cfdae3cc;
+	--clrArcHeaderTextHoverLight: #525d76;
+	--clrArcHeaderTextHoverDark: #cfdae3;
 
 	--clrArcSidebar: #353945;
 	--clrArcSidebarBorder: #2a2d37;
@@ -48,20 +50,23 @@ body {
 /***********************************************************************
 	TAB CONTAINER
 ***********************************************************************/
-/* Background */
+/* Background/text color */
 #tabs-tabbar-container,
 #tabs-container {
 	background-color: var(--clrArcWindowLight);
+	color: var(--clrArcHeaderTextLight);
 }
 
 .theme-dark #tabs-tabbar-container,
 .theme-dark #tabs-container {
 	background-color: var(--clrArcWindowDark);
+	color: var(--clrArcHeaderTextDark);
 }
 
 .theme-light.acc-dark #tabs-tabbar-container.top,
 .theme-light.acc-dark #tabs-container.top {
 	background-color: var(--clrArcWindowDark);
+	color: var(--clrArcHeaderTextDark);
 }
 
 /* Border */
@@ -82,11 +87,7 @@ body {
 	border-top: 1px solid var(--clrArcBorderDark) !important;
 }
 
-/* Darker theme: dark text/icon color when tabs on bottom */
-.theme-light.acc-dark #tabs-container.bottom {
-	color: var(--colorAccentFg_Darker);
-}
-
+/* Darker theme: dark icon color when tabs on bottom */
 .theme-light.acc-dark #tabs-container.bottom .newtab button,
 .theme-light.acc-dark #tabs-container.bottom .toolbar-tabbar.sync-and-trash-container button {
 	fill: var(--colorAccentFg_Darker);
@@ -139,9 +140,17 @@ body {
 	margin-top: -1px;
 }
 
-/* Darker theme: tab hover text color when tabs on bottom */
-.theme-light.acc-dark #tabs-container.bottom .tab-position .tab:hover:not(.active) {
-	color: var(--colorAccentFg_Darker);
+/* Tab hover text color */
+#tabs-container .tab-position .tab:hover:not(.active) {
+	color: var(--clrArcHeaderTextHoverLight);
+}
+
+.theme-dark #tabs-container .tab-position .tab:hover:not(.active) {
+	color: var(--clrArcHeaderTextHoverDark);
+}
+
+.theme-light.acc-dark #tabs-container.top .tab-position .tab:hover:not(.active) {
+	color: var(--clrArcHeaderTextHoverDark);
 }
 
 /* Darker theme: tab progress indicator when tabs on bottom */
