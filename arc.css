@@ -216,6 +216,12 @@ body {
 	stroke: transparent;
 }
 
+/* Remove bottom border radius for active tab when it is a stack header */
+.tab-position.is-substack > .tab.active {
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
 /***********************************************************************
 	ADDRESSBAR
 ***********************************************************************/
