@@ -168,6 +168,11 @@ body {
 	background-color: var(--colorBgAlpha_Darker);
 }
 
+/* Dark theme: Remove light border around active tab favicon */
+.theme-dark .tab-position .tab.active .tab-header .favicon:not(.svg) {
+	filter: none;
+}
+
 /***********************************************************************
 	ADDRESSBAR
 ***********************************************************************/
