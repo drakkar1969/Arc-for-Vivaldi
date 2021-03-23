@@ -94,6 +94,50 @@ body {
 }
 
 /***********************************************************************
+	TAB SUB-CONTAINER (TWO-LEVEL TAB STACKING)
+***********************************************************************/
+/* Background */
+.color-behind-tabs-on #tabs-subcontainer {
+	background-color: var(--clrArcWindowLight);
+}
+
+.theme-dark #tabs-subcontainer {
+	background-color: var(--clrArcWindowDark);
+}
+
+.theme-light.acc-dark #tabs-subcontainer.top {
+	background-color: var(--clrArcWindowDark);
+}
+
+/* Border */
+#tabs-subcontainer.top {
+	box-shadow: none;
+	border-top: 1px solid var(--clrArcBorderLight);
+}
+
+.theme-dark #tabs-subcontainer.top,
+.theme-light.acc-dark #tabs-subcontainer.top {
+	box-shadow: none;
+	border-top: 1px solid var(--clrArcBorderDark);
+}
+
+#tabs-subcontainer.bottom {
+	box-shadow: none;
+	border-bottom: 1px solid var(--clrArcBorderLight);
+}
+
+.theme-dark #tabs-subcontainer.bottom {
+	box-shadow: none;
+	border-bottom: 1px solid var(--clrArcBorderDark);
+}
+
+/* Darker theme: dark icon color when tabs on bottom */
+.theme-light.acc-dark #tabs-subcontainer.bottom .newtab button,
+.theme-light.acc-dark #tabs-subcontainer.bottom .toolbar-tabbar.subcontainer-lock button {
+	fill: var(--colorAccentFg_Darker);
+}
+
+/***********************************************************************
 	TABS
 ***********************************************************************/
 /* Tab title font + right fade */
@@ -104,52 +148,66 @@ body {
 }
 
 /* Border around hover/active tab */
-#tabs-container .tab-position .tab {
+#tabs-container .tab-position .tab,
+#tabs-subcontainer .tab-position .tab {
 	border: 1px solid transparent;
 }
 
 #tabs-container .tab-position .tab:hover,
-#tabs-container .tab-position .tab.active {
+#tabs-container .tab-position .tab.active,
+#tabs-subcontainer .tab-position .tab:hover,
+#tabs-subcontainer .tab-position .tab.active {
 	border: 1px solid var(--clrArcBorderLight);
 }
 
 .theme-dark #tabs-container .tab-position .tab:hover,
-.theme-dark #tabs-container .tab-position .tab.active {
+.theme-dark #tabs-container .tab-position .tab.active,
+.theme-dark #tabs-subcontainer .tab-position .tab:hover,
+.theme-dark #tabs-subcontainer .tab-position .tab.active {
 	border: 1px solid var(--clrArcBorderDark);
 }
 
 .theme-light.acc-dark #tabs-container.top .tab-position .tab:hover,
-.theme-light.acc-dark #tabs-container.top .tab-position .tab.active {
+.theme-light.acc-dark #tabs-container.top .tab-position .tab.active,
+.theme-light.acc-dark #tabs-subcontainer.top .tab-position .tab:hover,
+.theme-light.acc-dark #tabs-subcontainer.top .tab-position .tab.active {
 	border: 1px solid var(--clrArcBorderDark);
 }
 
 /* Ensure active tab is on top of tab strip border */
-#tabs-container.top .tab-position .tab.active {
+#tabs-container.top .tab-position:not(.is-substack) .tab.active,
+#tabs-subcontainer.top .tab-position .tab.active {
 	border-bottom-color: var(--colorBg) !important;
 }
 
-#tabs-container.bottom .tab-position .tab.active {
+#tabs-container.bottom .tab-position:not(.is-substack) .tab.active,
+#tabs-subcontainer.bottom .tab-position .tab.active {
 	border-top-color: var(--colorBg) !important;
 }
 
-#tabs-container.top .tab-position .tab {
+#tabs-container.top .tab-position .tab,
+#tabs-subcontainer.top .tab-position .tab {
 	margin-bottom: -1px;
 }
 
-#tabs-container.bottom .tab-position .tab {
+#tabs-container.bottom .tab-position .tab,
+#tabs-subcontainer.bottom .tab-position .tab {
 	margin-top: -1px;
 }
 
 /* Tab hover text color */
-#tabs-container .tab-position .tab:hover:not(.active) {
+#tabs-container .tab-position .tab:hover:not(.active),
+#tabs-subcontainer .tab-position .tab:hover:not(.active) {
 	color: var(--clrArcHeaderTextHoverLight);
 }
 
-.theme-dark #tabs-container .tab-position .tab:hover:not(.active) {
+.theme-dark #tabs-container .tab-position .tab:hover:not(.active),
+.theme-dark #tabs-subcontainer .tab-position .tab:hover:not(.active) {
 	color: var(--clrArcHeaderTextHoverDark);
 }
 
-.theme-light.acc-dark #tabs-container.top .tab-position .tab:hover:not(.active) {
+.theme-light.acc-dark #tabs-container.top .tab-position .tab:hover:not(.active),
+.theme-light.acc-dark #tabs-subcontainer.top .tab-position .tab:hover:not(.active) {
 	color: var(--clrArcHeaderTextHoverDark);
 }
 
@@ -160,11 +218,14 @@ body {
 
 /* Dark/Darker theme: inactive tab hover color */
 .theme-dark #tabs-container.top .tab-position .tab:hover:not(.active),
-.theme-dark #tabs-container.bottom .tab-position .tab:hover:not(.active) {
+.theme-dark #tabs-container.bottom .tab-position .tab:hover:not(.active),
+.theme-dark #tabs-subcontainer.top .tab-position .tab:hover:not(.active),
+.theme-dark #tabs-subcontainer.bottom .tab-position .tab:hover:not(.active) {
 	background-color: var(--colorBgAlpha);
 }
 
-.theme-light.acc-dark #tabs-container.top .tab-position .tab:hover:not(.active) {
+.theme-light.acc-dark #tabs-container.top .tab-position .tab:hover:not(.active),
+.theme-light.acc-dark #tabs-subcontainer.top .tab-position .tab:hover:not(.active) {
 	background-color: var(--colorBgAlpha_Darker);
 }
 
