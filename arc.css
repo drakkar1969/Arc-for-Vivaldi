@@ -58,11 +58,7 @@ body {
 }
 
 .theme-dark #tabs-tabbar-container,
-.theme-dark #tabs-container {
-	background-color: var(--clrArcWindowDark);
-	color: var(--clrArcHeaderTextDark);
-}
-
+.theme-dark #tabs-container,
 .theme-light.acc-dark #tabs-tabbar-container.top,
 .theme-light.acc-dark #tabs-container.top {
 	background-color: var(--clrArcWindowDark);
@@ -101,10 +97,7 @@ body {
 	background-color: var(--clrArcWindowLight);
 }
 
-.theme-dark #tabs-subcontainer {
-	background-color: var(--clrArcWindowDark);
-}
-
+.theme-dark #tabs-subcontainer,
 .theme-light.acc-dark #tabs-subcontainer.top {
 	background-color: var(--clrArcWindowDark);
 }
@@ -148,25 +141,17 @@ body {
 }
 
 /* Border around hover/active tab */
-#tabs-container .tab-position .tab,
-#tabs-subcontainer .tab-position .tab {
+.tab-position .tab {
 	border: 1px solid transparent;
 }
 
-#tabs-container .tab-position .tab:hover,
-#tabs-container .tab-position .tab.active,
-#tabs-subcontainer .tab-position .tab:hover,
-#tabs-subcontainer .tab-position .tab.active {
+.tab-position .tab:hover,
+.tab-position .tab.active {
 	border: 1px solid var(--clrArcBorderLight);
 }
 
-.theme-dark #tabs-container .tab-position .tab:hover,
-.theme-dark #tabs-container .tab-position .tab.active,
-.theme-dark #tabs-subcontainer .tab-position .tab:hover,
-.theme-dark #tabs-subcontainer .tab-position .tab.active {
-	border: 1px solid var(--clrArcBorderDark);
-}
-
+.theme-dark .tab-position .tab:hover,
+.theme-dark .tab-position .tab.active,
 .theme-light.acc-dark #tabs-container.top .tab-position .tab:hover,
 .theme-light.acc-dark #tabs-container.top .tab-position .tab.active,
 .theme-light.acc-dark #tabs-subcontainer.top .tab-position .tab:hover,
@@ -196,16 +181,11 @@ body {
 }
 
 /* Tab hover text color */
-#tabs-container .tab-position .tab:hover:not(.active),
-#tabs-subcontainer .tab-position .tab:hover:not(.active) {
+.color-behind-tabs-on .tab-position .tab:hover:not(.active) {
 	color: var(--clrArcHeaderTextHoverLight);
 }
 
-.theme-dark #tabs-container .tab-position .tab:hover:not(.active),
-.theme-dark #tabs-subcontainer .tab-position .tab:hover:not(.active) {
-	color: var(--clrArcHeaderTextHoverDark);
-}
-
+.theme-dark .tab-position .tab:hover:not(.active),
 .theme-light.acc-dark #tabs-container.top .tab-position .tab:hover:not(.active),
 .theme-light.acc-dark #tabs-subcontainer.top .tab-position .tab:hover:not(.active) {
 	color: var(--clrArcHeaderTextHoverDark);
@@ -217,10 +197,7 @@ body {
 }
 
 /* Dark/Darker theme: inactive tab hover color */
-.theme-dark #tabs-container.top .tab-position .tab:hover:not(.active),
-.theme-dark #tabs-container.bottom .tab-position .tab:hover:not(.active),
-.theme-dark #tabs-subcontainer.top .tab-position .tab:hover:not(.active),
-.theme-dark #tabs-subcontainer.bottom .tab-position .tab:hover:not(.active) {
+.theme-dark .tab-position .tab:hover:not(.active) {
 	background-color: var(--colorBgAlpha);
 }
 
