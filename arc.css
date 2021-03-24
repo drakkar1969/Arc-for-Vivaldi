@@ -435,6 +435,7 @@ body {
 #panel_switch,
 #switch {
 	background-color: var(--clrArcSidebar);
+	border-right: 1px solid var(--clrArcSidebarBorder);
 	box-shadow: none !important;
 }
 
@@ -468,14 +469,16 @@ body {
 
 #switch > button:active:not(.active),
 #switch .addwebpanel-wrapper > button:active:not(.active) {
-	background-color: var(--clrArcSidebarHover) !important;
+	background-color: var(--colorHighlightBg) !important;
+	color: var(--clrArcSidebarTextActive);
+	fill: var(--clrArcSidebarTextActive);
 }
 
 #switch > button.active,
 #switch > button.active:hover {
-	background-color: var(--colorBgLightIntense) !important;
-	color: var(--colorFgIntense);
-	fill: var(--colorFgIntense);
+	background-color: var(--colorHighlightBg) !important;
+	color: var(--clrArcSidebarTextActive);
+	fill: var(--clrArcSidebarTextActive);
 }
 
 /***********************************************************************
@@ -510,7 +513,6 @@ body {
 /* Background/border/color */
 .vivaldi-settings .settings-sidebar {
 	background-color: var(--clrArcSidebar);
-	border-left: 1px solid var(--clrArcSidebarBorder);
 	border-right: 1px solid var(--clrArcSidebar);
 	box-shadow: none;
 	color: var(--clrArcSidebarText);
