@@ -526,6 +526,15 @@ body {
 	color: var(--clrArcHeaderTextDark);
 }
 
+/* Vivaldi menu button vertical position */
+#browser.tabs-top .vivaldi {
+	top: -3px;
+}
+
+#browser.address-top:not(.tabs-top) .vivaldi {
+	top: 5px;
+}
+
 /* Darker theme: Vivaldi menu button color */
 #browser.theme-light.acc-dark:not(.tabs-top) .vivaldi {
 	fill: var(--colorFg_Darker);
