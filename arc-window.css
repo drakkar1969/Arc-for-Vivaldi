@@ -2,12 +2,12 @@
 	BUTTON GROUP
 ***********************************************************************/
 /* Button group vertical position */
-.window-buttongroup {
-	margin-top: 7px;
+#browser.linux .window-buttongroup {
+	top: 10px;
 }
 
-#browser:not(.address-top):not(.tabs-top) .window-buttongroup {
-	margin-top: 1px;
+#browser.linux:not(.address-top):not(.tabs-top) .window-buttongroup {
+	top: 6px;
 }
 
 /* Remove background on window buttons */
