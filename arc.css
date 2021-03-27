@@ -535,9 +535,9 @@ body {
 	top: 5px;
 }
 
-/* Darker theme: Vivaldi menu button color */
-#browser.theme-light.acc-dark:not(.tabs-top) .vivaldi {
-	fill: var(--colorFg_Darker);
+/* Vivaldi menu button color */
+.vivaldi {
+	fill: var(--colorAccentFg);
 }
 
 /***********************************************************************
