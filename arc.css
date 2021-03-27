@@ -40,6 +40,7 @@ body {
 
 	/* Additional variables for Darker theme */
 	--colorAccentBg_Darker: #dddee1;
+	--colorAccentBgAlpha_Darker: #ffffff66;
 	--colorAccentFg_Darker: #000000;
 	--colorAccentFgFaded_Darker: #8c8c8e;
 	--colorBgAlpha_Darker: #383c4acc;
@@ -222,6 +223,12 @@ body {
 /* Dark theme: Remove light border around active tab favicon */
 .theme-dark .tab-position .tab.active .tab-header .favicon:not(.svg) {
 	filter: none;
+}
+
+/* Darker theme: Fix stack count indicator on inactive tab when it is a stack header */
+.theme-light.acc-dark #tabs-container.bottom .tab-position .tab:not(.active) .stack-counter {
+	background-color: var(--colorAccentBgAlpha_Darker);
+	color: var(--colorAccentFg_Darker);
 }
 
 /* Remove border around inactive tab when it is a stack header (two-level tab stacking) */
