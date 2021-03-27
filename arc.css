@@ -528,7 +528,11 @@ body {
 
 /* Vivaldi menu button vertical position */
 #browser.tabs-top .vivaldi {
-	top: -3px;
+	top: -4px;
+}
+
+#browser.tabs-top.tabs-at-edge.maximized .vivaldi {
+	top: 3px;
 }
 
 #browser.address-top:not(.tabs-top) .vivaldi {
