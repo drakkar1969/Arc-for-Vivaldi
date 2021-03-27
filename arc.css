@@ -8,6 +8,9 @@ body {
 	--clrArcBorderLight: #d4d5db;
 	--clrArcBorderDark: #262a33;
 
+	--clrArcTabIndicatorLight: #eff0f3;
+	--clrArcTabIndicatorDark: #323744;
+
 	--clrArcHeaderTextLight: #525d76cc;
 	--clrArcHeaderTextDark: #cfdae3cc;
 	--clrArcHeaderTextHoverLight: #525d76;
@@ -220,6 +223,96 @@ body {
 .tab-position.is-substack > .tab.active {
 	border-bottom-left-radius: 0;
 	border-bottom-right-radius: 0;
+}
+
+/***********************************************************************
+	TAB INDICATORS (COMPACT TAB STACKING)
+***********************************************************************/
+/* Tab indicator group */
+.tab-group-indicator {
+	top: 0;
+	background-color: var(--clrArcWindowLight);
+	border-bottom: 1px solid var(--clrArcBorderLight);
+	padding-left: 0;
+	padding-right: 0;
+	margin-right: 1px;
+}
+
+.theme-dark .tab-group-indicator,
+.theme-light.acc-dark.tabs-top .tab-group-indicator {
+	background-color: var(--clrArcWindowDark);
+	border-bottom: 1px solid var(--clrArcBorderDark);
+}
+
+.tabs-bottom .tab-group-indicator {
+	bottom: 0;
+	border-bottom: 0;
+	border-top: 1px solid var(--clrArcBorderLight);
+}
+
+.theme-dark.tabs-bottom .tab-group-indicator {
+	border-top: 1px solid var(--clrArcBorderDark);
+}
+
+/* Tab indicator position/size/border */
+.tab-indicator {
+	height: 5px !important;
+	margin-bottom: -1px;
+	border-top: 0 !important;
+	border-bottom: 0 !important;
+	border: 1px solid var(--clrArcBorderLight) !important;
+}
+
+.theme-dark .tab-indicator,
+.theme-light.acc-dark.tabs-top .tab-indicator {
+	border: 1px solid var(--clrArcBorderDark) !important;
+}
+
+.tabs-bottom .tab-indicator {
+	margin-bottom: 0;
+	margin-top: -1px;
+}
+
+.tab-indicator.active {
+	border-top-width: 1px !important;
+	border-bottom-width: 1px !important;
+}
+
+.tab.active + .tab-group-indicator .tab-indicator.active {
+	border-bottom-color: var(--colorBg) !important;
+}
+
+.tabs-bottom .tab.active + .tab-group-indicator .tab-indicator.active {
+	border-top-color: var(--colorBg) !important;
+	border-bottom-color: var(--clrArcBorderLight) !important;
+}
+
+.theme-dark.tabs-bottom .tab.active + .tab-group-indicator .tab-indicator.active {
+	border-bottom-color: var(--clrArcBorderDark) !important;
+}
+
+.tabs-top .tab-indicator:last-of-type,
+.tabs-bottom .tab-indicator:last-of-type {
+	margin-right: 0;
+}
+
+/* Tab indicator background */
+.color-behind-tabs-on .tab-indicator {
+	background-color: var(--clrArcTabIndicatorLight);
+}
+
+.theme-dark .tab-indicator,
+.theme-light.acc-dark.tabs-top .tab-indicator {
+	background-color: var(--clrArcTabIndicatorDark);
+}
+
+.color-behind-tabs-on .tab-indicator.active {
+	background-color: var(--clrArcTabIndicatorLight);
+}
+
+.theme-dark .tab-indicator.active,
+.theme-light.acc-dark.tabs-top .tab-indicator.active {
+	background-color: var(--clrArcTabIndicatorDark);
 }
 
 /***********************************************************************
