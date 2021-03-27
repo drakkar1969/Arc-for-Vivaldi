@@ -53,6 +53,16 @@ body {
 /***********************************************************************
 	TAB CONTAINER
 ***********************************************************************/
+/* Padding */
+.linux.normal #tabs-tabbar-container.top,
+.tabs-at-edge #tabs-tabbar-container.top {
+	padding-top: 3px;
+}
+
+#tabs-tabbar-container.bottom {
+	padding-bottom: 3px;
+}
+
 /* Background/text color */
 #tabs-tabbar-container,
 #tabs-container {
