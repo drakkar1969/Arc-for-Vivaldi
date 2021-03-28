@@ -431,6 +431,12 @@ body {
 	border-color: var(--colorHighlightBg);
 }
 
+/* Light/Darker themes: Addressfield input box in fullscreen */
+.address-top-off .UrlBar .UrlBar-AddressField:focus-within,
+.address-bottom-off .UrlBar .UrlBar-AddressField:focus-within {
+	border-color: var(--colorHighlightBg);
+}
+
 /* Darker theme: Addressfield/URL text colors when addressbar is on top and tabs are not on top */
 #browser.theme-light.acc-dark.address-top:not(.tabs-top) .UrlBar-AddressField {
 	color: var(--colorFg_Darker);
@@ -505,6 +511,12 @@ body {
 /* Darker theme: Searchfield text color when addressbar is on top and tabs are not on top */
 #browser.theme-light.acc-dark.address-top:not(.tabs-top) .UrlBar-SearchField {
 	color: var(--colorFg_Darker);
+}
+
+/* Light/Darker themes: Searchfield input box in fullscreen */
+.address-top-off .UrlBar .UrlBar-SearchField:focus-within,
+.address-bottom-off .UrlBar .UrlBar-SearchField:focus-within {
+	border-color: var(--colorHighlightBg);
 }
 
 /***********************************************************************
