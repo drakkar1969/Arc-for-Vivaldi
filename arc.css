@@ -412,33 +412,41 @@ body {
 }
 
 /***********************************************************************
-	ADDRESSFIELD
+	ADDRESSFIELD/SEARCHFIELD
 ***********************************************************************/
-/* Addressfield input box */
-.color-behind-tabs-on .UrlBar-AddressField {
+/* Input box */
+.color-behind-tabs-on .UrlBar-AddressField,
+.color-behind-tabs-on .UrlBar-SearchField {
 	background-color: var(--clrArcInputBgLight);
 	border-color: var(--clrArcInputBorderLight);
 }
 
 #browser.theme-dark .UrlBar-AddressField,
-#browser.theme-light.acc-dark.address-top:not(.tabs-top) .UrlBar-AddressField {
+#browser.theme-dark .UrlBar-SearchField,
+#browser.theme-light.acc-dark.address-top:not(.tabs-top) .UrlBar-AddressField,
+#browser.theme-light.acc-dark.address-top:not(.tabs-top) .UrlBar-SearchField {
 	background-color: var(--clrArcInputBgDark);
 	border-color: var(--clrArcInputBorderDark);
 }
 
 #browser.theme-dark .UrlBar-AddressField:focus-within,
-#browser.theme-light.acc-dark.address-top:not(.tabs-top) .UrlBar-AddressField:focus-within {
+#browser.theme-dark .UrlBar-SearchField:focus-within,
+#browser.theme-light.acc-dark.address-top:not(.tabs-top) .UrlBar-AddressField:focus-within,
+#browser.theme-light.acc-dark.address-top:not(.tabs-top) .UrlBar-SearchField:focus-within {
 	border-color: var(--colorHighlightBg);
 }
 
-/* Light/Darker themes: Addressfield input box in fullscreen */
+/* Light/Darker themes: Input box in fullscreen */
 .address-top-off .UrlBar .UrlBar-AddressField:focus-within,
-.address-bottom-off .UrlBar .UrlBar-AddressField:focus-within {
+.address-top-off .UrlBar .UrlBar-SearchField:focus-within,
+.address-bottom-off .UrlBar .UrlBar-AddressField:focus-within,
+.address-bottom-off .UrlBar .UrlBar-SearchField:focus-within {
 	border-color: var(--colorHighlightBg);
 }
 
-/* Darker theme: Addressfield/URL text colors when addressbar is on top and tabs are not on top */
-#browser.theme-light.acc-dark.address-top:not(.tabs-top) .UrlBar-AddressField {
+/* Darker theme: URL text/colors when addressbar is on top and tabs are not on top */
+#browser.theme-light.acc-dark.address-top:not(.tabs-top) .UrlBar-AddressField,
+#browser.theme-light.acc-dark.address-top:not(.tabs-top) .UrlBar-SearchField {
 	color: var(--colorFg_Darker);
 }
 
@@ -486,37 +494,6 @@ body {
 /* Darker theme: Bookmark button when addressbar is on top and tabs are not on top */
 #browser.theme-light.acc-dark.address-top:not(.tabs-top) .bookmark-animated-fill {
 	fill: var(--colorFg_Darker);
-}
-
-/***********************************************************************
-	SEARCHFIELD
-***********************************************************************/
-/* Searchfield input box */
-.color-behind-tabs-on .UrlBar-SearchField {
-	background-color: var(--clrArcInputBgLight);
-	border-color: var(--clrArcInputBorderLight);
-}
-
-#browser.theme-dark .UrlBar-SearchField,
-#browser.theme-light.acc-dark.address-top:not(.tabs-top) .UrlBar-SearchField {
-	background-color: var(--clrArcInputBgDark);
-	border-color: var(--clrArcInputBorderDark);
-}
-
-#browser.theme-dark .UrlBar-SearchField:focus-within,
-#browser.theme-light.acc-dark.address-top:not(.tabs-top) .UrlBar-SearchField:focus-within {
-	border-color: var(--colorHighlightBg);
-}
-
-/* Darker theme: Searchfield text color when addressbar is on top and tabs are not on top */
-#browser.theme-light.acc-dark.address-top:not(.tabs-top) .UrlBar-SearchField {
-	color: var(--colorFg_Darker);
-}
-
-/* Light/Darker themes: Searchfield input box in fullscreen */
-.address-top-off .UrlBar .UrlBar-SearchField:focus-within,
-.address-bottom-off .UrlBar .UrlBar-SearchField:focus-within {
-	border-color: var(--colorHighlightBg);
 }
 
 /***********************************************************************
