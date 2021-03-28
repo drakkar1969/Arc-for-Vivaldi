@@ -456,9 +456,9 @@ body {
 	background-color: var(--colorAccentBg_Darker);
 }
 
-/* Darker theme: Pageload progressbar color when addressbaris on top and tabs are not on top */
+/* Darker theme: Pageload progressbar color when addressbar is on top and tabs are not on top */
 #browser.theme-light.acc-dark.address-top:not(.tabs-top) .UrlBar-AddressField .pageload .pageload-indicator {
-	background-color: var(--clrArcWindowDark);
+	background-color: var(--colorAccentBg);
 }
 
 #browser.theme-light.acc-dark.address-top:not(.tabs-top) .UrlBar-AddressField .pageload .pageload-indicator::-webkit-progress-value {
