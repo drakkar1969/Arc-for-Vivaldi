@@ -684,7 +684,13 @@ body {
 ***********************************************************************/
 .toolbar-mainbar > .button-toolbar > button,
 .toolbar-mainbar > .toolbar-group > .button-toolbar > button,
-.color-behind-tabs-on .bookmark-bar button {
+.color-behind-tabs-on .bookmark-bar button,
+.toolbar-insideinput.toolbar-insideinput.toolbar-insideinput > .button-toolbar button,
+.toolbar-insideinput.toolbar-insideinput.toolbar-insideinput > .toolbar-group > .button-toolbar button,
+.toolbar-insideinput.toolbar-insideinput.toolbar-insideinput > .button-toolbar button:not(:hover):not(:active):not(:focus):not(.button-pressed),
+.toolbar-insideinput.toolbar-insideinput.toolbar-insideinput > .toolbar-group > .button-toolbar button:not(:hover):not(:active):not(:focus):not(.button-pressed) {
+	box-shadow: none !important;
+	background-color: transparent;
 	border: 1px solid transparent;
 	border-radius: 2px;
 	font-size: 1.1em;
@@ -698,31 +704,47 @@ body {
 /* Hover */
 .toolbar-mainbar > .button-toolbar > button:hover,
 .toolbar-mainbar > .toolbar-group > .button-toolbar > button:hover,
-.color-behind-tabs-on .bookmark-bar button:hover {
+.color-behind-tabs-on .bookmark-bar button:hover,
+.toolbar-insideinput.toolbar-insideinput.toolbar-insideinput > .button-toolbar button:hover,
+.toolbar-insideinput.toolbar-insideinput.toolbar-insideinput > .toolbar-group > .button-toolbar button:hover {
 	background-color: var(--clrArcToolbtnBgHoverLight);
 	border-color: var(--clrArcToolbtnBorderHoverLight);
 }
 
 #browser.theme-dark .toolbar-mainbar > .button-toolbar > button:hover,
 #browser.theme-dark .toolbar-mainbar > .toolbar-group > .button-toolbar > button:hover,
-#browser.theme-dark.color-behind-tabs-on .bookmark-bar button:hover {
+#browser.theme-dark.color-behind-tabs-on .bookmark-bar button:hover,
+#browser.theme-dark .toolbar-insideinput.toolbar-insideinput.toolbar-insideinput > .button-toolbar button:hover,
+#browser.theme-dark .toolbar-insideinput.toolbar-insideinput.toolbar-insideinput > .toolbar-group > .button-toolbar button:hover {
 	background-color: var(--clrArcToolbtnBgHoverDark);
 	border-color: var(--clrArcToolbtnBorderHoverDark);
 }
 
 #browser.theme-light.acc-dark.address-top:not(.tabs-top) .toolbar-mainbar > .button-toolbar > button:hover,
-#browser.theme-light.acc-dark.address-top:not(.tabs-top) .toolbar-mainbar > .toolbar-group > .button-toolbar > button:hover {
+#browser.theme-light.acc-dark.address-top:not(.tabs-top) .toolbar-mainbar > .toolbar-group > .button-toolbar > button:hover,
+#browser.theme-light.acc-dark.address-top:not(.tabs-top) .toolbar-insideinput.toolbar-insideinput.toolbar-insideinput > .button-toolbar button:hover,
+#browser.theme-light.acc-dark.address-top:not(.tabs-top) .toolbar-insideinput.toolbar-insideinput.toolbar-insideinput > .toolbar-group > .button-toolbar button:hover {
 	background-color: var(--clrArcToolbtnBgHoverDark);
 	border-color: var(--clrArcToolbtnBorderHoverDark);
 }
 
 /* Focus */
-.color-behind-tabs-on .bookmark-bar button:focus {
+.color-behind-tabs-on .bookmark-bar button:focus,
+.toolbar-insideinput.toolbar-insideinput.toolbar-insideinput > .button-toolbar button:focus,
+.toolbar-insideinput.toolbar-insideinput.toolbar-insideinput > .toolbar-group > .button-toolbar button:focus {
 	background-color: var(--clrArcToolbtnBgHoverLight);
 	border-color: var(--clrArcToolbtnBorderHoverLight);
 }
 
-#browser.theme-dark.color-behind-tabs-on .bookmark-bar button:focus {
+#browser.theme-dark.color-behind-tabs-on .bookmark-bar button:focus,
+#browser.theme-dark .toolbar-insideinput.toolbar-insideinput.toolbar-insideinput > .button-toolbar button:focus,
+#browser.theme-dark .toolbar-insideinput.toolbar-insideinput.toolbar-insideinput > .toolbar-group > .button-toolbar button:focus {
+	background-color: var(--clrArcToolbtnBgHoverDark);
+	border-color: var(--clrArcToolbtnBorderHoverDark);
+}
+
+#browser.theme-light.acc-dark.address-top:not(.tabs-top) .toolbar-insideinput.toolbar-insideinput.toolbar-insideinput > .button-toolbar button:focus,
+#browser.theme-light.acc-dark.address-top:not(.tabs-top) .toolbar-insideinput.toolbar-insideinput.toolbar-insideinput > .toolbar-group > .button-toolbar button:focus {
 	background-color: var(--clrArcToolbtnBgHoverDark);
 	border-color: var(--clrArcToolbtnBorderHoverDark);
 }
@@ -730,7 +752,11 @@ body {
 /* Active */
 .toolbar-mainbar > .button-toolbar > button:active,
 .toolbar-mainbar > .toolbar-group > .button-toolbar > button:active,
-.color-behind-tabs-on .bookmark-bar button:active {
+.color-behind-tabs-on .bookmark-bar button:active,
+.toolbar-insideinput.toolbar-insideinput.toolbar-insideinput > .button-toolbar button:active,
+.toolbar-insideinput.toolbar-insideinput.toolbar-insideinput > .toolbar-group > .button-toolbar button:active,
+.toolbar-insideinput.toolbar-insideinput.toolbar-insideinput > .button-toolbar button.button-pressed:active,
+.toolbar-insideinput.toolbar-insideinput.toolbar-insideinput > .toolbar-group > .button-toolbar button.button-pressed:active {
 	background-color: var(--clrArcToolbtnBgActiveLight);
 	border-color: var(--clrArcToolbtnBorderActiveLight);
 	color: var(--clrArcToolbtnActiveText);
@@ -738,17 +764,45 @@ body {
 
 #browser.theme-dark .toolbar-mainbar > .button-toolbar > button:active,
 #browser.theme-dark .toolbar-mainbar > .toolbar-group > .button-toolbar > button:active,
-#browser.theme-dark.color-behind-tabs-on .bookmark-bar button:active {
+#browser.theme-dark.color-behind-tabs-on .bookmark-bar button:active,
+#browser.theme-dark .toolbar-insideinput.toolbar-insideinput.toolbar-insideinput > .button-toolbar button:active,
+#browser.theme-dark .toolbar-insideinput.toolbar-insideinput.toolbar-insideinput > .toolbar-group > .button-toolbar button:active,
+#browser.theme-dark .toolbar-insideinput.toolbar-insideinput.toolbar-insideinput > .button-toolbar button.button-pressed:active,
+#browser.theme-dark .toolbar-insideinput.toolbar-insideinput.toolbar-insideinput > .toolbar-group > .button-toolbar button.button-pressed:active {
 	background-color: var(--clrArcToolbtnBgActiveDark);
 	border-color: var(--clrArcToolbtnBorderActiveDark);
 	color: var(--clrArcToolbtnActiveText);
 }
 
 #browser.theme-light.acc-dark.address-top:not(.tabs-top) .toolbar-mainbar > .button-toolbar > button:active,
-#browser.theme-light.acc-dark.address-top:not(.tabs-top) .toolbar-mainbar > .toolbar-group > .button-toolbar > button:active {
+#browser.theme-light.acc-dark.address-top:not(.tabs-top) .toolbar-mainbar > .toolbar-group > .button-toolbar > button:active,
+#browser.theme-light.acc-dark.address-top:not(.tabs-top) .toolbar-insideinput.toolbar-insideinput.toolbar-insideinput > .button-toolbar button:active,
+#browser.theme-light.acc-dark.address-top:not(.tabs-top) .toolbar-insideinput.toolbar-insideinput.toolbar-insideinput > .toolbar-group > .button-toolbar button:active,
+#browser.theme-light.acc-dark.address-top:not(.tabs-top) .toolbar-insideinput.toolbar-insideinput.toolbar-insideinput > .button-toolbar button.button-pressed:active,
+#browser.theme-light.acc-dark.address-top:not(.tabs-top) .toolbar-insideinput.toolbar-insideinput.toolbar-insideinput > .toolbar-group > .button-toolbar button.button-pressed:active {
 	background-color: var(--clrArcToolbtnBgActiveDark);
 	border-color: var(--clrArcToolbtnBorderActiveDark);
 	color: var(--clrArcToolbtnActiveText);
+}
+
+/* Pressed */
+.toolbar-insideinput.toolbar-insideinput.toolbar-insideinput > .button-toolbar button.button-pressed,
+.toolbar-insideinput.toolbar-insideinput.toolbar-insideinput > .toolbar-group > .button-toolbar button.button-pressed {
+	background-color: var(--clrArcToolbtnBgHoverLight);
+	border-color: var(--clrArcToolbtnBorderHoverLight);
+}
+
+#browser.theme-dark .toolbar-insideinput.toolbar-insideinput.toolbar-insideinput > .button-toolbar button.button-pressed,
+#browser.theme-dark .toolbar-insideinput.toolbar-insideinput.toolbar-insideinput > .toolbar-group > .button-toolbar button.button-pressed {
+	background-color: var(--clrArcToolbtnBgHoverDark);
+	border-color: var(--clrArcToolbtnBorderHoverDark);
+}
+
+#browser.theme-light.acc-dark.address-top:not(.tabs-top) .toolbar-insideinput.toolbar-insideinput.toolbar-insideinput > .button-toolbar button.button-pressed,
+#browser.theme-light.acc-dark.address-top:not(.tabs-top) .toolbar-insideinput.toolbar-insideinput.toolbar-insideinput > .toolbar-group > .button-toolbar button.button-pressed {
+	background-color: var(--clrArcToolbtnBgHoverDark);
+	border-color: var(--clrArcToolbtnBorderHoverDark);
+	color: var(--colorFg_Darker);
 }
 
 /* Fix folder icon color on hover/active states */
