@@ -551,6 +551,12 @@ body {
 	box-shadow: none !important;
 }
 
+#panels-container.right #panel_switch,
+#panels-container.right #switch {
+	border-left: 1px solid var(--clrArcSidebarBorder);
+	border-right: none;
+}
+
 #panels-container:after {
 	background-color: var(--clrArcSidebarBorder);
 }
