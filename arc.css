@@ -555,6 +555,14 @@ body {
 	border-right: none;
 }
 
+#panels-container.left #panels {
+	padding-right: 0;
+}
+
+#panels-container.right #panels {
+	padding-left: 0;
+}
+
 #panel_switch,
 #switch {
 	background-color: var(--clrArcSidebar);
