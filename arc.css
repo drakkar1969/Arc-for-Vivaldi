@@ -555,6 +555,14 @@ body {
 	border-right: none;
 }
 
+#panels-container:not(.overlay):not(.icons) {
+	border-color: var(--clrArcBorderLight);
+}
+
+#browser.theme-dark #panels-container:not(.overlay):not(.icons) {
+	border-color: var(--clrArcBorderDark);
+}
+
 #panels-container.left #panels {
 	padding-right: 0;
 }
@@ -567,6 +575,17 @@ body {
 #switch {
 	background-color: var(--clrArcSidebar);
 	box-shadow: none !important;
+}
+
+#panels-container:not(.overlay):not(.icons) #panel_switch,
+#panels-container:not(.overlay):not(.icons) #switch {
+	border-right: 1px solid var(--clrArcSidebarBorder);
+}
+
+#panels-container.right:not(.overlay):not(.icons) #panel_switch,
+#panels-container.right:not(.overlay):not(.icons) #switch {
+	border-left: 1px solid var(--clrArcSidebarBorder);
+	border-right: none;
 }
 
 #panel_switch:hover {
