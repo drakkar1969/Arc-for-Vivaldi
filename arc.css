@@ -544,25 +544,29 @@ body {
 	PANEL
 ***********************************************************************/
 /* Background */
-#panel_switch,
-#switch {
+#panels-container {
 	background-color: var(--clrArcSidebar);
 	border-right: 1px solid var(--clrArcSidebarBorder);
 	box-shadow: none !important;
 }
 
-#panels-container.right #panel_switch,
-#panels-container.right #switch {
+#panels-container.right {
 	border-left: 1px solid var(--clrArcSidebarBorder);
 	border-right: none;
 }
 
-#panels-container:after {
-	background-color: var(--clrArcSidebarBorder);
+#panel_switch,
+#switch {
+	background-color: var(--clrArcSidebar);
+	box-shadow: none !important;
 }
 
 #panel_switch:hover {
 	background-color: var(--clrArcSidebarHover);
+}
+
+.panel-group {
+	background-color: var(--colorBgAlphaBlur);
 }
 
 /* Toggle arrow color */
