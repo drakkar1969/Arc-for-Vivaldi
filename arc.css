@@ -607,7 +607,6 @@ body {
 	box-shadow: none !important;
 	border: none !important;
 	color: var(--clrArcSidebarText);
-	fill: var(--clrArcSidebarText);
 }
 
 #switch > button:hover:not(.active),
@@ -618,19 +617,30 @@ body {
 #switch > button:focus:not(.active),
 #switch .addwebpanel-wrapper > button:focus:not(.active) {
 	background-color: var(--clrArcSidebarHover) !important;
+	color: var(--clrArcSidebarTextActive);
 }
 
-#switch > button:active:not(.active),
-#switch .addwebpanel-wrapper > button:active:not(.active) {
+#switch > button.active:not(:focus),
+#switch .addwebpanel-wrapper > button.active:not(:focus) {
 	background-color: var(--colorHighlightBg) !important;
 	color: var(--clrArcSidebarTextActive);
-	fill: var(--clrArcSidebarTextActive);
 }
 
 #switch > button.active,
-#switch > button.active:hover {
+#switch .addwebpanel-wrapper > button.active,
+#switch > button.active:hover,
+#switch .addwebpanel-wrapper > button.active:hover {
 	background-color: var(--colorHighlightBg) !important;
 	color: var(--clrArcSidebarTextActive);
+}
+
+#switch > button.active:not(:focus) svg .small-icon-fill,
+#switch .addwebpanel-wrapper > button.active:not(:focus) svg .small-icon-fill {
+	fill: var(--clrArcSidebarTextActive);
+}
+
+#switch > button.active:not(:focus) svg .small-icon-outline,
+#switch .addwebpanel-wrapper > button.active:not(:focus) svg .small-icon-outline {
 	fill: var(--clrArcSidebarTextActive);
 }
 
