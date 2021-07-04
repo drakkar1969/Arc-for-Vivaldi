@@ -606,6 +606,7 @@ body {
 #switch .addwebpanel-wrapper > button {
 	box-shadow: none !important;
 	border: none !important;
+	border-radius: 0 !important;
 	color: var(--clrArcSidebarText);
 }
 
